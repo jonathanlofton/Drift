@@ -40,8 +40,13 @@
   | "/mymusic/albums" | "MyAlbums" |
   | "/mymusic/artists" | "MyArtists" |
   | "/playlists/:playlistId" | "PlaylistContainer" |
+  | "/playlists" | "PlaylistIndexContainer" |
   | "/albums/:albumId" | "AlbumContainer" |
+  | "/albums"         | "AlbumIndexContainer" |
   | "/artists/:artistId" | "ArtistContainer" |
+  | "/artists" | "ArtistIndexContainer" |
+  | "/songs/:songId" | "SongDetailContainer" |
+  | "/songs" | "SongIndexContainer" |
   | "/search/playlists" | "SearchContainer" |
   | "/search/songs" | "SearchContainer" |
   | "/search/albums" | "SearchContainer" |

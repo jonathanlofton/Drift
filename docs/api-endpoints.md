@@ -25,6 +25,20 @@
 - `PATCH /api/songs/:id`
 - `DELETE /api/songs/:id`
 
+### Albums
+- `GET /api/albums`
+- `POST /api/albums`
+- `GET /api/albums/:id`
+- `PATCH /api/albums/:id`
+- `DELETE /api/albums/:id`
+
+### Artists
+- `GET /api/artists`
+- `POST /api/artists`
+- `GET /api/artists/:id`
+- `PATCH /api/artists/:id`
+- `DELETE /api/artists/:id`
+
 ### Playlists
 
 - `GET /api/playlists`

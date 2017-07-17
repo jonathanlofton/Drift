@@ -11,25 +11,21 @@ This project is a web application based off of Spotify, an online music player. 
 - [ ] New account creation, login, and guest/demo login
 - [ ] A production README
 - [ ] Hosting on Heroku
-- [ ] Song/Playlist CRUD
-- [ ] Search
+- [ ] Song, Artist, Album index and show
+- [ ] Playlist CRUD
 - [ ] Continuous play while navigating site
 - [ ] Following playlists/Friending users
 - [ ] Bonus: Radio (shuffle play)
 - [ ] Bonus: Explore Page
+- [ ] Bonus: Search
 
 ## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+* [wireframes](wireframes/)
+* [components](component-hierarchy.md)
+* [sample-state](sample-state.md)
+* [api-endpoints](api-endpoints.md)
+* [schema](schema.md)
 
 
 ## Implementation Timeline
@@ -54,6 +50,6 @@ This project is a web application based off of Spotify, an online music player. 
 
 **Objective:** Audio can be streamed continuously while navigating the site
 
-### Phase 6: Cleanup (2 Days)
+### Phase 6: Cleanup (1 Day)
 
 **Objective:** Find bugs, fix bugs, and style it out!

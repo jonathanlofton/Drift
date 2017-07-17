@@ -51,6 +51,24 @@ genre         | string    | not null
 belongs_to :album
 belongs_to :artist, :through => :album
 
+## playlists
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+title       | string    | not null
+creator_id  | integer   | not null
+img_name    | string    |
+
+belongs_to :user
+has_many :followers
+
+## playlists songs
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+playlist_id | integer   | not null
+song_id     | integer   |
+
 
 **BONUS**
 
@@ -63,21 +81,9 @@ liker_id    | integer   | not null
 
 belongs_to :user
 
-## playlists
+## followers
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-title       | string    | not null
-creator_id  | integer   | not null
-follower_id | integer   |
-img_name    | string    |
-
-belongs_to :user
-has_many :followers
-
-## playlists songs
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
+follower_id | integer   | not null
 playlist_id | integer   | not null
-song_id     | integer   |
