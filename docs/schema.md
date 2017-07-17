@@ -81,7 +81,7 @@ liker_id    | integer   | not null
 
 belongs_to :user
 
-## followers
+## follows
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
