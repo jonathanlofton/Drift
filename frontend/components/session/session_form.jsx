@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -6,38 +7,27 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: '',
+      password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // if logged in then add the '/' homepage
-  // to the history
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
   }
 
-  // passing a field (a key in the state)
-  // and updating it to the current value
-  // of what is in the input
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
   }
 
-  // takes the information in the currentState
-  // that is being updated by update and when submitted
-  // will save that state in a new object and pass that
-  // to the processForm function that will either create
-  // a new user or log in the user depending on the
-  // form type
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    const user = this.state;
+    this.props.processForm({user});
   }
 
   navLink() {
@@ -64,7 +54,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to DRIFT!
+          Welcome to BenchBnB!
           <br/>
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
