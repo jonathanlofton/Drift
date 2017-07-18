@@ -22,18 +22,25 @@ export const receiveErrors = errors => ({
 // the reducer so when thunk our middle ware sees we are passing a function
 // (which is an ajax request) it will perform that function and then dispatch
 // a regular action creator that will pass a regular object to the reducer
-export const login = (user) => dispatch => (
-  APIUtil.login(user).then(user => dispatch(receiveCurrentUser(user))
+
+export const signup = user => dispatch => (
+  APIUtil.signup(user).then(user => (
+    dispatch(receiveCurrentUser(user))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
-  )
+  ))
+);
+
+export const login = user => dispatch => (
+  APIUtil.login(user).then(user => (
+    dispatch(receiveCurrentUser(user))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
 );
 
 export const logout = () => dispatch => (
-  APIUtil.logout().then((user) => dispatch(receiveCurrentUser(null))
-));
-
-export const signup = (user) => dispatch => (
-  APIUtil.signup(user).then(user => dispatch(receiveCurrentUser(user))),
-  err => ( dispatch(receiveErrors(err.responseJSON)))
+  APIUtil.logout().then(user => (
+    dispatch(receiveCurrentUser(null))
+  ))
 );
