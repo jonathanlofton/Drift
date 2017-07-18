@@ -1,0 +1,35 @@
+
+
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+
+  .login-form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 400px;
+    height: 400px;
+
+    h1 {
+      font-family: "Roboto", sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .login-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

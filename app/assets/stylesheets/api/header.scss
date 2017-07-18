@@ -1,0 +1,16 @@
+.header {
+
+  background: black;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+
+  .App-title {
+    font-family: "roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-left: 25px;
+  }
+}
