@@ -11,6 +11,9 @@
   font-family: helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  background-image: url(/assets/fern);
+  background-size: cover;
+  color: white;
 
   .header-group {
     display: flex;
@@ -23,9 +26,9 @@
 
     .header-name {
       font-family: "roboto", sans-serif;
-      font-size: 52px;
+      font-size: 60px;
       font-weight: 900;
-      
+
     }
   }
 }
@@ -38,22 +41,28 @@
   align-items: center;
   height: 100vh;
   font-family: helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
+  background-image: url(/assets/fern);
+  background-size: cover;
+
 
   .initial-greeting-form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: rgba(72, 72, 72, 0.4);
+    color: white;
 
     width: 400px;
     height: 400px;
 
     h1 {
       font-family: 'Roboto', sans-serif;
-      font-size: 60px;
+      font-size: 100px;
       font-weight: 900px;
+      color: white;
     }
 
     .login-signup-greeting {
@@ -63,7 +72,19 @@
       align-items: center;
 
       a {
-        padding: 10px;
+        margin: 20px;
+        padding: 15px 32px;
+        border: lightgray 3px solid;
+        padding: 5px;
+        border-radius: 5px;
+        color: lightgray;
+
+
+      }
+
+      .guest-login {
+        color: rgb(0, 204, 102);
+        border: rgb(0, 204, 102) 3px solid;
       }
     }
   }

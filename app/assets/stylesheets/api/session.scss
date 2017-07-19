@@ -9,12 +9,16 @@
   font-family: helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  background-image: url(/assets/fern);
+  background-size: cover;
 
   .login-form-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
+    background: rgba(72, 72, 72, 0.4);
 
     width: 400px;
     height: 400px;
