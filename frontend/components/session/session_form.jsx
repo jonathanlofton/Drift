@@ -67,9 +67,9 @@ class SessionForm extends React.Component {
           <br/>
           Please {this.props.formType} or {this.navLink()}
           <div className="errors">{this.renderErrors()}</div>
+
           <div className="login-form">
-            <br />
-            <label>
+            <label className="login-form-label">
               <input
                 type="text"
                 value={this.state.username}
@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <label>
+            <label className="login-form-label">
               <input
                 type="password"
                 value={this.state.password}
@@ -86,9 +86,11 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </label>
-            <br />
-            <input type="submit" value="Submit" className="session-submit-button" />
-            <button onClick={this.handleClick} className="guest-login">Guest Login</button>
+
+            <div className="login-form-buttons">
+              <input type="submit" value="Submit" className="session-submit-button" />
+              <button onClick={this.handleClick} className="guest-login">Guest Login</button>
+            </div>
           </div>
         </form>
       </div>

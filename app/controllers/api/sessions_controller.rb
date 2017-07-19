@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
     # need to check if there is a user because if you
     # do user.save on a nil object it will just throw an
     # error and not return a falsy value.
-    if @user && @user.save
+    if @user
       login(@user)
       render '/api/users/show'
     else

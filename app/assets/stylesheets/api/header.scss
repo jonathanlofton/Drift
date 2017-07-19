@@ -1,20 +1,34 @@
 .header {
 
   background: black;
-  height: 50px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   -webkit-transition: height 0.3s;
   font-family: helvetica, sans-serif;
 
-  .App-title {
-    font-family: "roboto", sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: white;
+  .app-title-icon-combo {
+    display: flex;
+    flex-direction: row;
     margin-left: 25px;
+    justify-content: space-between;
+
+    .App-title {
+      font-family: "roboto", sans-serif;
+      font-size: 35px;
+      font-weight: 700;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
   }
+
+
 
   .header-logout {
     color: white;
@@ -25,5 +39,4 @@
 }
 
 .header:hover {
-  height: 55px;
 }

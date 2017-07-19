@@ -38,6 +38,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      width: 200px;
 
       .login-input {
         border-bottom: 3px solid white;
@@ -49,13 +50,13 @@
       }
 
       .login-input:hover {
-        border-bottom: 3px solid lightgreen;
+        border-bottom: 3px solid #1ed760;
         width: 225px;
       }
     }
 
     .session-submit-button {
-      margin: 20px;
+      margin: 20px 0px;
       padding: 15px 32px;
       border: lightgray 3px solid;
       padding: 5px 15px;
@@ -65,11 +66,17 @@
     }
 
     .session-submit-button:hover {
-      color: lightgreen;
-      border: lightgreen 3px solid;
-      font-size: 20px;
+      color: #1ed760;
+      border: #1ed760 3px solid;
+      font-size: 18px;
     }
   }
+}
+
+.login-form-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
 }
 
 .instead-link {
@@ -78,22 +85,27 @@
 }
 
 .instead-link:hover {
-  color: lightgreen;
+  color: #1ed760;
   font-size: 18px;
 }
 
 .guest-login {
   font-size: 16px;
-  color: rgb(0, 204, 102);
+  color: #1db954;
   border: rgb(0, 204, 102) 3px solid;
   border-radius: 5px;
   padding: 5px 15px;
-  margin: 5px;
+  margin: 0px;
   -webkit-transition: color 0.3s, border 0.3s, font-size 0.3s;
 }
 
 .guest-login:hover {
-  color: green;
-  border: green 3px solid;
+  color: #1ed760;
+  border: #1ed760 3px solid;
   font-size: 18px;
+}
+
+.login-form-buttons {
+  width: 200px;
+  text-align: center;
 }
