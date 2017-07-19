@@ -18,7 +18,7 @@
     align-items: center;
     flex-direction: column;
     color: white;
-    background: rgba(72, 72, 72, 0.4);
+    background: rgba(6, 6, 6, 0.6);
 
     width: 400px;
     height: 400px;
@@ -34,6 +34,46 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      .login-input {
+        border-bottom: 3px solid white;
+        -webkit-transition: width 2s;
+        transition: background-color 5000s ease-in-out 0s, border-bottom 1s;
+        padding: 5px;
+        text-align: center;
+
+      }
+
+      .login-input:hover {
+        border-bottom: 3px solid lightgreen;
+        width: 225px;
+      }
+    }
+
+    .session-submit-button {
+      margin: 20px;
+      padding: 15px 32px;
+      border: lightgray 3px solid;
+      padding: 5px 15px;
+      border-radius: 5px;
+      color: lightgray;
+      -webkit-transition: color 0.5s, border 0.5s, font-size 0.5s;
+    }
+
+    .session-submit-button:hover {
+      color: lightgreen;
+      border: lightgreen 3px solid;
+      font-size: 20px;
     }
   }
+}
+
+.instead-link {
+  text-decoration: underline;
+  transition: color 0.5s, font-size 0.5s;
+}
+
+.instead-link:hover {
+  color: lightgreen;
+  font-size: 18px;
 }

@@ -4,7 +4,9 @@
   height: 50px;
   display: flex;
   align-items: center;
-
+  justify-content: space-between;
+  -webkit-transition: height 0.3s;
+  font-family: helvetica, sans-serif;
 
   .App-title {
     font-family: "roboto", sans-serif;
@@ -13,4 +15,15 @@
     color: white;
     margin-left: 25px;
   }
+
+  .header-logout {
+    color: white;
+    margin-right: 25px;
+  }
+
+
+}
+
+.header:hover {
+  height: 55px;
 }

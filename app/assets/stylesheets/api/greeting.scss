@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: rgba(6, 6, 6, 0.6);
 
     width: 400px;
     height: 400px;
@@ -28,7 +29,24 @@
       font-family: "roboto", sans-serif;
       font-size: 60px;
       font-weight: 900;
+      text-align: center;
+    }
 
+    .header-button {
+      font-size: 20px;
+      margin: 20px;
+      padding: 15px 32px;
+      border: darkred 3px solid;
+      padding: 5px 15px;
+      border-radius: 5px;
+      color: darkred;
+      -webkit-transition: color 0.3s, border 0.3s, font-size 0.3s;
+    }
+
+    .header-button:hover {
+      color: red;
+      border: red 3px solid;
+      font-size: 25px;
     }
   }
 }
@@ -52,7 +70,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(72, 72, 72, 0.4);
+    background: rgba(6, 6, 6, 0.6);
     color: white;
 
     width: 400px;
@@ -63,6 +81,7 @@
       font-size: 100px;
       font-weight: 900px;
       color: white;
+      margin: 20px;
     }
 
     .login-signup-greeting {
@@ -75,19 +94,29 @@
         margin: 20px;
         padding: 15px 32px;
         border: lightgray 3px solid;
-        padding: 5px;
+        padding: 5px 15px;
         border-radius: 5px;
         color: lightgray;
+        -webkit-transition: color 0.3s, border 0.3s;
+      }
 
-
+      a:hover {
+        color: gray;
+        border: gray 3px solid;
       }
 
       .guest-login {
         color: rgb(0, 204, 102);
         border: rgb(0, 204, 102) 3px solid;
         border-radius: 5px;
-        padding: 5px;
+        padding: 5px 15px;
         margin: 20px;
+        -webkit-transition: color 0.3s, border 0.3s;
+      }
+
+      .guest-login:hover {
+        color: green;
+        border: green 3px solid;
       }
     }
   }
