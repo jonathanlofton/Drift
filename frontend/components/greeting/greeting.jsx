@@ -26,7 +26,8 @@ class SessionLinks extends React.Component {
               <Link to="signup">Sign Up</Link>
             </div>
 
-            <button onClick={this.handleClick}>Guest Login</button>
+              <button onClick={this.handleClick} className="guest-login">Guest Login</button>
+
           </nav>
         </div>
       </div>
