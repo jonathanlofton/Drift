@@ -23,6 +23,10 @@
     width: 400px;
     height: 400px;
 
+    .errors {
+      color: red;
+    }
+
     h1 {
       font-family: "Roboto", sans-serif;
       font-size: 32px;
@@ -75,5 +79,21 @@
 
 .instead-link:hover {
   color: lightgreen;
+  font-size: 18px;
+}
+
+.guest-login {
+  font-size: 16px;
+  color: rgb(0, 204, 102);
+  border: rgb(0, 204, 102) 3px solid;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 5px;
+  -webkit-transition: color 0.3s, border 0.3s, font-size 0.3s;
+}
+
+.guest-login:hover {
+  color: green;
+  border: green 3px solid;
   font-size: 18px;
 }

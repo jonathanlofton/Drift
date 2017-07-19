@@ -26,7 +26,7 @@ class SessionLinks extends React.Component {
               <Link to="signup">Sign Up</Link>
             </div>
 
-              <button onClick={this.handleClick} className="guest-login">Guest Login</button>
+            <button onClick={this.handleClick} className="guest-login">Guest Login</button>
 
           </nav>
         </div>
@@ -43,6 +43,7 @@ const personalGreeting = (currentUser, logout) => (
     <hgroup className="header-group">
       <h2 className="header-name">Hi, {currentUser.username}!</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
+      <Link to="/music" className="music-button">Music</Link>
     </hgroup>
   </div>
 );

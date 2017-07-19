@@ -1,0 +1,66 @@
+// greeting to newly signed in user
+.personal-greeting-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background-image: url(http://res.cloudinary.com/jlofton/image/upload/v1500422805/fern_xjanxg.jpg);
+  background-size: cover;
+  color: white;
+
+  .header-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(6, 6, 6, 0.6);
+
+    width: 400px;
+    height: 400px;
+
+    .header-name {
+      font-family: "roboto", sans-serif;
+      font-size: 60px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .header-button {
+      font-size: 20px;
+      margin: 20px;
+      padding: 15px 32px;
+      border: darkred 3px solid;
+      padding: 5px 15px;
+      border-radius: 5px;
+      color: darkred;
+      -webkit-transition: color 0.3s, border 0.3s, font-size 0.3s;
+    }
+
+    .header-button:hover {
+      color: red;
+      border: red 3px solid;
+      font-size: 25px;
+    }
+  }
+}
+
+.music-button {
+  font-size: 20px;
+  margin: 20px;
+  padding: 15px 32px;
+  border: #1db954 3px solid;
+  background-color: #1db954;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: white;
+  -webkit-transition:  background-color 0.3s, border 0.3s, font-size 0.3s;
+}
+
+.music-button:hover {
+  background-color: #1ed760;
+  border: #1ed760 3px solid;
+  font-size: 25px;
+}

@@ -10,9 +10,11 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log("WHAT THE HELL")
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
@@ -50,6 +52,13 @@ class SessionForm extends React.Component {
     );
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    const guestUser = { user: { username: 'guest_user', password: '123456' } };
+    this.props.login(guestUser);
+    this.props.history.push('/');
+  }
+
   render() {
     return (
       <div className="login-form-container">
@@ -57,13 +66,13 @@ class SessionForm extends React.Component {
           <h1>Welcome to DRIFT.</h1>
           <br/>
           Please {this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
+          <div className="errors">{this.renderErrors()}</div>
           <div className="login-form">
             <br />
             <label>
               <input
                 type="text"
-                value="Username"
+                value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
               />
@@ -72,13 +81,14 @@ class SessionForm extends React.Component {
             <label>
               <input
                 type="password"
-                value="Password"
+                value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
               />
             </label>
             <br />
             <input type="submit" value="Submit" className="session-submit-button" />
+            <button onClick={this.handleClick} className="guest-login">Guest Login</button>
           </div>
         </form>
       </div>

@@ -2,6 +2,7 @@ import { Route, Link } from 'react-router-dom';
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session/session_form_container';
+import MusicContainer from './music/music_container';
 
 const App = () => (
   <div>
@@ -16,6 +17,7 @@ const App = () => (
     <Route exact path="/" component={GreetingContainer} />
     <Route path="/login" component={SessionFormContainer} />
     <Route path="/signup" component={SessionFormContainer} />
+    <Route path="/music" component={MusicContainer} />
 
     <footer className="footer" />
   </div>

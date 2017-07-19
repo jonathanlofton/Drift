@@ -4,6 +4,9 @@
 Minimum Viable Product
 https://trello.com/b/p0hdtuwM/drift
 
+Heroku
+https://driftspotifyclone.herokuapp.com/#/
+
 ## Minimum Viable Product
 
 This project is a web application based off of Spotify, an online music player. This application will be built with Ruby on Rails, React, and Redux. By the end of the project the list of criteria below should be completed.
