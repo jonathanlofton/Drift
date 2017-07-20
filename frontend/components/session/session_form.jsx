@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearErrors();
+    // this.props.clearErrors();
   }
 
   update(field) {
@@ -58,7 +58,7 @@ class SessionForm extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    const guestUser = { user: { username: 'guest_user', password: '123456' } };
+    const guestUser = { user: { username: 'Phil Collins', password: 'hotdogs' } };
     this.props.login(guestUser);
     this.props.history.push('/music');
   }

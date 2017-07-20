@@ -9,7 +9,7 @@ class SessionLinks extends React.Component {
   }
 
   handleClick(e) {
-    const guestUser = { user: { username: 'guest_user', password: '123456' } };
+    const guestUser = { user: { username: 'Phil Collins', password: 'hotdogs' } };
     this.props.login(guestUser);
     this.props.history.push('/music');
   }
