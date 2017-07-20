@@ -23,13 +23,7 @@ const App = () => (
     <Route path="/signup" component={SessionFormContainer} />
     <Route path="/music" component={MusicContainer} />
 
-    <footer className="footer">
-      <ReactAudioPlayer
-        src="audo_file"
-        autoPlay
-        controls
-      />
-    </footer>
+    <footer className="footer" />
   </div>
 );
 

@@ -20,6 +20,10 @@ class SessionForm extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -56,7 +60,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const guestUser = { user: { username: 'guest_user', password: '123456' } };
     this.props.login(guestUser);
-    this.props.history.push('/');
+    this.props.history.push('/music');
   }
 
   render() {
@@ -75,6 +79,7 @@ class SessionForm extends React.Component {
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
+                placeholder="Username"
               />
             </label>
             <br />
@@ -84,6 +89,7 @@ class SessionForm extends React.Component {
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
+                placeholder="Password"
               />
             </label>
 

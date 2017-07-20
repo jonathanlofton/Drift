@@ -4,8 +4,11 @@
 
 **HomeContainer**
   - Sidebar
+    - links to browse, search, playlists
   - Playbar
+    - current song
   - Artists
+    - artist index
 
 **UserMusicContainer**
   - UserPlaylists

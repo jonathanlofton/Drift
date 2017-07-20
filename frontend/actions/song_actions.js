@@ -1,26 +1,27 @@
 
-import * as APIUtil from '../util/session_api_util';
+import * as APIUtil from '../util/song_api_util';
 
-export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
-export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const RECEIVE_CURRENT_SONG = 'RECEIVE_CURRENT_SONG';
+export const RECEIVE_SONGS = 'RECEIVE_ERRORS';
+export const RECEIVE_SONG = 'RECEIVE_SONG';
 
 // actions are creating JSON objects that will go to a reducer and
 // make a change to the state and post it to the store, the reason
 // that we have thunk action creators
 
-export const receiveCurrentUser = currentUser => ({
-  type: RECEIVE_CURRENT_USER,
-  currentUser,
+export const receiveCurrentSong = currentSong => ({
+  type: RECEIVE_CURRENT_SONG,
+  currentSong,
 });
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
-  errors,
+export const receiveSongs = songs => ({
+  type: RECEIVE_SONGS,
+  songs,
 });
 
-export const clearErrors = () => ({
-  type: CLEAR_ERRORS,
+export const receiveSong = song => ({
+  type: RECEIVE_SONG,
+  song,
 });
 
 // Thunk action creators need to make an AJAX call before it can go to
