@@ -14,14 +14,13 @@ class SessionForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("WHAT THE HELL")
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
   }
 
-  componentWillUnmount() {
-    // this.props.clearErrors();
+  componentDidMount() {
+    this.props.clearErrors();
   }
 
   update(field) {

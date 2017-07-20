@@ -1,5 +1,6 @@
-.header {
-
+.header-render {
+  position: fixed;
+  width: 100%;
   background: black;
   height: 75px;
   display: flex;
@@ -20,6 +21,11 @@
       font-weight: 700;
       color: white;
       margin-left: 10px;
+      transition: color 0.5s;
+    }
+
+    .App-title:hover {
+      color: #1db954;
     }
 
     .icon {
@@ -28,15 +34,22 @@
     }
   }
 
-
-
-  .header-logout {
+  .header-nav-bar {
+    font-size: 16px;
+    background: black;
     color: white;
     margin-right: 25px;
+    transition: color 1s;
+
+    .loginout {
+      transition: color 0.5s;
+    }
+
+    .loginout:hover {
+      color: #1db954;
+    }
   }
 
 
-}
 
-.header:hover {
 }
