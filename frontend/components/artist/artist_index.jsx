@@ -18,7 +18,6 @@ class ArtistIndex extends React.Component {
     return (
 
       <div className="artist-index">
-        <h1>hello</h1>
         <ul>
           {artists.map( artist => <ArtistIndexItem key={artist.id} artist={artist} />)}
         </ul>

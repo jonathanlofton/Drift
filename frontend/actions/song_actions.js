@@ -19,34 +19,19 @@ export const receiveSongs = songs => ({
   songs,
 });
 
-export const receiveSong = song => ({
-  type: RECEIVE_SONG,
-  song,
-});
-
 // Thunk action creators need to make an AJAX call before it can go to
 // the reducer so when thunk our middle ware sees we are passing a function
 // (which is an ajax request) it will perform that function and then dispatch
 // a regular action creator that will pass a regular object to the reducer
 
-export const signup = user => dispatch => (
-  APIUtil.signup(user).then(user => (
-    dispatch(receiveCurrentUser(user))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
+export const fetchSong = id => dispatch => (
+  APIUtil.fetchSong(id).then(song => (
+    dispatch(receiveCurrentSong(song))
   ))
 );
 
-export const login = user => dispatch => (
-  APIUtil.login(user).then(user => (
-    dispatch(receiveCurrentUser(user))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
-  ))
-);
-
-export const logout = () => dispatch => (
-  APIUtil.logout().then(user => (
-    dispatch(receiveCurrentUser(null))
+export const fetchSongs = () => dispatch => (
+  APIUtil.fetchSongs().then(songs => (
+    dispatch(receiveSongs(songs))
   ))
 );
