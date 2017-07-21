@@ -1,8 +1,10 @@
 .header-render {
   position: fixed;
-  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 90%;
   background: black;
-  height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;

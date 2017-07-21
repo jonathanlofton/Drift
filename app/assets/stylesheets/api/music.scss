@@ -5,6 +5,44 @@
 }
 
 .music-landing-page {
-  height: calc(100vh - 100px);
-  margin-top: 75px;
+
+  .sidebar {
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    right: 90%;
+    top: 10%;
+    bottom: 5%;
+
+  }
+
+  .body {
+    background-image: linear-gradient(rgb(61, 72, 91), rgb(6, 7, 9) 85%);
+    position: fixed;
+    left: 10%;
+    right: 0;
+    top: 10%;
+    bottom: 5%;
+
+    .content {
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      left: 15%;
+      bottom: 10%;
+    }
+  }
+
+  .footer {
+    position: fixed;
+    top: 95%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: black;
+
+    Audio {
+      width: 100%;
+    }
+  }
 }
