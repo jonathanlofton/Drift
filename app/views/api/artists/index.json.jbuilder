@@ -1,6 +1,6 @@
 json.array! @artists.each do |artist|
   json.name artist.name
   json.genre artist.genre
-  json.description artists.description
-  json.image_url artists.image_url
+  json.description artist.description
+  json.image_url artist.image_url
 end

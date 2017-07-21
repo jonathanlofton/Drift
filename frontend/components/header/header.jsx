@@ -21,7 +21,7 @@ class Header extends React.Component {
   }
 
   handleClick() {
-    this.props.logout();
+    this.props.logout().then(() => this.props.history.push("/"));
   }
 
   render() {
