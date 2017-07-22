@@ -1,1 +1,1 @@
-json.extract! @artist, :name, :genre, :description, :image_url
+json.extract! artist, :id, :name, :genre, :description, :image_url

@@ -1,6 +1,3 @@
-json.array! @artists.each do |artist|
-  json.name artist.name
-  json.genre artist.genre
-  json.description artist.description
-  json.image_url artist.image_url
+json.array! @artists do |artist|
+  json.partial! 'api/artists/artist', artist: artist
 end

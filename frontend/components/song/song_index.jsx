@@ -11,12 +11,13 @@ class SongIndex extends React.Component {
   }
 
   render(){
-    console.log(this.props)
-    const { songs } = this.props;
+    console.log(this.props);
+    const { songs, receiveCurrentSong } = this.props;
     return (
       <div>
         <ul>
-          {songs.map(song => <SongIndexItem key={song.id} song={song} />)}
+          {songs.map(song => <SongIndexItem key={song.id} song={song}
+            receiveCurrentSong={receiveCurrentSong}/>)}
         </ul>
       </div>
     )

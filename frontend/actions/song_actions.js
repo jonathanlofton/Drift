@@ -2,7 +2,7 @@
 import * as APIUtil from '../util/song_api_util';
 
 export const RECEIVE_CURRENT_SONG = 'RECEIVE_CURRENT_SONG';
-export const RECEIVE_SONGS = 'RECEIVE_ERRORS';
+export const RECEIVE_SONGS = 'RECEIVE_SONGS';
 export const RECEIVE_SONG = 'RECEIVE_SONG';
 
 // actions are creating JSON objects that will go to a reducer and

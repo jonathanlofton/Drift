@@ -12,14 +12,12 @@ class ArtistIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-
     const { artists } = this.props;
     return (
 
       <div className="artist-index">
         <ul className="artist-index-list">
-          {artists.map( artist => <ArtistIndexItem key={artist.id} artist={artist} />)}
+          {artists.map(artist => <ArtistIndexItem key={artist.id} artist={artist} />)}
         </ul>
       </div>
 
@@ -29,10 +27,3 @@ class ArtistIndex extends React.Component {
 
 
 export default ArtistIndex;
-
-
-//
-
-    // if ( this.props.artists ) {
-    // const { artists } = this.props;
-    // }

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import ArtistIndexContainer from '../artist/artist_index_container';
 import SongIndexContainer from '../song/song_index_container';
+import AudioPlayerContainer from '../audioplayer/audio_player_container';
 
 class Music extends React.Component {
   constructor(props) {
@@ -26,10 +27,9 @@ class Music extends React.Component {
 
 
         <footer className="footer">
-          <ReactAudioPlayer
-            src=""
-            controls
-          />
+          <div className="audio-player-container">
+            <AudioPlayerContainer />
+          </div>
         </footer>
       </div>
     );

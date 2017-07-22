@@ -4,7 +4,14 @@ import logger from 'redux-logger';
 
 import RootReducer from '../reducers/root_reducer';
 
-const configureStore = (preloadedState = {}) => (
+const defaultState = {
+  songs: {
+    byId: {},
+    playlist: [],
+  },
+};
+
+const configureStore = (preloadedState = defaultState) => (
   createStore(
     RootReducer,
     preloadedState,
