@@ -18,7 +18,7 @@ class ArtistIndex extends React.Component {
       return (
         <div className="artist-show">
           <h1>{artist.name}</h1>
-          <img src={artist.image_url} alt={artist.name} />
+          <img src={artist.show_image_url} alt={artist.name} />
         </div>
       );
     } else {

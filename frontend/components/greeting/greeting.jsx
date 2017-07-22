@@ -11,7 +11,7 @@ class SessionLinks extends React.Component {
   handleClick(e) {
     const guestUser = { user: { username: 'Phil Collins', password: 'hotdogs' } };
     this.props.login(guestUser);
-    this.props.history.push('/music');
+    this.props.history.push('/music/artists');
   }
 
   render() {
@@ -40,7 +40,7 @@ const personalGreeting = (currentUser, logout) => (
         <h2 className="header-name">Hi, {currentUser.username}!</h2>
       <div className="button-sizing">
         <button className="logout-button" onClick={logout}>Log Out</button>
-        <Link to="/music" className="music-button">Music</Link>
+        <Link to="/music/artists" className="music-button">Music</Link>
       </div>
     </hgroup>
   </div>

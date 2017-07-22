@@ -1,15 +1,18 @@
 
-ul #song-index-item {
-  color: white;
+#song-index-list {
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  font-family: helvetica, sans-serif;
 
-  li .song-item {
-    font-size: 16px;
-    font-family: helvetica, sans-serif;
-    color: white;
+  .song-item {
+    div {
+      display: flex;
+      padding: 10px;
 
-    p {
-      color: white;
+      button {
+        padding-right: 20px;
+      }
     }
   }
-
 }

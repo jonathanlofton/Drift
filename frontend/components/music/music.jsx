@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import ArtistIndexContainer from '../artist/artist_index_container';
@@ -20,21 +20,19 @@ class Music extends React.Component {
             <div className="search-button">
               <h1>Search</h1>
             </div>
-            <h1>Artists</h1>
+            <Link to="/music/artists"><h1>Artists</h1></Link>
             <h1>Your Music</h1>
             <h1>Playlists</h1>
+            <Link to="/music/songs"><h1>Songs</h1></Link>
           </div>
         </div>
 
         <div className="body">
-          <div className="content-title">
-            <h1>Content</h1>
-          </div>
           <div className="content">
             <Route exact path="/music/artists" component={ArtistIndexContainer} />
-            <Route exact path="/music/artists/:artistId" component={ArtistShowContainer} />
-            <SongIndexContainer />
+            <Route exact path="/music/songs" component={SongIndexContainer} />
           </div>
+          <Route exact path="/music/artists/:artistId" component={ArtistShowContainer} />
         </div>
 
 

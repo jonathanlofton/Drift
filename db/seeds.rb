@@ -73,7 +73,7 @@ Song.create(title: "Damaged Goods", album_id: gang_of_four_album.id, artist_id: 
 
 
 
-frank_ocean = Artist.create(name: "Frank Ocean", genre: "R & B", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702509/frank-ocean-icon_gkmlsr.jpg")
+frank_ocean = Artist.create(name: "Frank Ocean", genre: "R & B", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702509/frank-ocean-icon_gkmlsr.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500764060/Frank-Ocean-showpage_ajguje.jpg")
 nostalgia = Album.create(name:"Nostalgia Ultra", artist_id: frank_ocean.id, genre: frank_ocean.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608955/frank_ocean_album_wsmy93.jpg")
 Song.create(title: "American Wedding", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607627/12_american_wedding_bxmqf6.mp3")
 Song.create(title: "Novacane", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607626/03_novacane_a5x3ue.mp3")
@@ -96,7 +96,7 @@ live_love_asap = Album.create(name: "Live. Love. ASAP", artist_id: asap_rocky.id
 kissin_pink = Song.create(title: "Kissin' Pink", album_id: live_love_asap.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500502810/10_-_ASAP_Rocky-Kissin_Pink_Feat_ASAP_Ferg_Prod_By_Beautiful_Lou_ntsgpp.mp3", genre: live_love_asap.genre, artist_id: asap_rocky.id)
 
 
-whitest_boy_alive = Artist.create(name: "Whitest Boy Alive", genre: "indie", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500609336/whitest_boy_photo_dptpaa.jpg")
+whitest_boy_alive = Artist.create(name: "Whitest Boy Alive", genre: "indie", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500767490/whitest_boy_photo_mer48c.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500764175/whitestboy_ojeuta.jpg")
 
 burning = Album.create(name: "Burning", artist_id: whitest_boy_alive.id, genre: whitest_boy_alive.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608956/whitest_boy_album_qfzmjn.jpg")
 

@@ -59,7 +59,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const guestUser = { user: { username: 'Phil Collins', password: 'hotdogs' } };
     this.props.login(guestUser);
-    this.props.history.push('/music');
+    this.props.history.push('/music/artists');
   }
 
   render() {

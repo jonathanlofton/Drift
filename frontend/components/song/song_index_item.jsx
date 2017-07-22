@@ -16,11 +16,10 @@ class SongIndexItem extends React.Component {
     return (
       <li className="song-item">
         <div>
+          <button onClick={this.handleClick}>Play</button>
           <Link to={`/songs/${song.id}`}>
-            <p>{song.id}</p>
             <p>{song.title}</p>
           </Link>
-          <button onClick={this.handleClick}>Play</button>
         </div>
       </li>
     );
