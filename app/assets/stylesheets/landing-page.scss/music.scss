@@ -1,0 +1,56 @@
+
+
+.music-landing-page {
+
+  .sidebar {
+    position: fixed;
+    background: rgba(1,1,1,0.5);
+    left: 0;
+    right: 85%;
+    top: 10%;
+    bottom: 10%;
+
+  }
+
+  .body {
+    z-index: -1;
+    background-image: linear-gradient(rgb(61, 72, 91), rgb(6, 7, 9) 85%);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 10%;
+    bottom: 10%;
+
+    .content-title {
+      color: white;
+      margin-left: 20%;
+      margin-top: 1%;
+      text-align: center;
+      font-family: helvetica, sans-serif;
+      font-size: 30px;
+    }
+
+    .content {
+      position: fixed;
+      top: 20%;
+      right: 5%;
+      left: 20%;
+      bottom: 15%;
+    }
+  }
+
+  .footer {
+
+
+    .audio-player-container {
+      position: fixed;
+      top: 90%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgb(24, 24, 24);
+
+
+    }
+  }
+}

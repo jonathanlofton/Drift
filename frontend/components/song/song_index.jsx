@@ -14,12 +14,10 @@ class SongIndex extends React.Component {
     console.log(this.props);
     const { songs, receiveCurrentSong } = this.props;
     return (
-      <div>
-        <ul>
-          {songs.map(song => <SongIndexItem key={song.id} song={song}
-            receiveCurrentSong={receiveCurrentSong}/>)}
-        </ul>
-      </div>
+      <ul id="song-index-list">
+        {songs.map(song => <SongIndexItem key={song.id} song={song}
+          receiveCurrentSong={receiveCurrentSong}/>)}
+      </ul>
     )
   }
 }

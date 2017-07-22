@@ -15,10 +15,20 @@ class Music extends React.Component {
       <div className="music-landing-page">
 
         <div className="sidebar">
-
+          <div className="nav-bar-box">
+            <div className="search-button">
+              <h1>Search</h1>
+            </div>
+            <h1>Artists</h1>
+            <h1>Your Music</h1>
+            <h1>Playlists</h1>
+          </div>
         </div>
 
         <div className="body">
+          <div className="content-title">
+            <h1>Content</h1>
+          </div>
           <div className="content">
             <ArtistIndexContainer />
             <SongIndexContainer />

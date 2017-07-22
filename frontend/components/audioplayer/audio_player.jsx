@@ -15,18 +15,28 @@ class AudioPlayer extends React.Component {
       return (
         <ReactAudioPlayer
           src={song.song_url}
-          autoplay
+          autoPlay
           controls
-          volume
         />
       );
     } else {
       return (
-        <ReactAudioPlayer
-          src={''}
-          controls
-          volume
-        />
+        <div id="audio-player" class="audio-player-wrapper">
+          <div class="audio-player-image">
+            <span class="audio-player-song-name"></span>
+          </div>
+
+          <div class="audio-player-controls">
+            <span class="audio-player-progress">
+              <span class="audio-player-progress-bar"></span>
+            </span>
+            <span class="audio-player-button-wrappers">
+              <a role="button" class="audio-player-button small icon-backward"></a>
+              <a role="button" class="audio-player-button audio-player-place-pause-button icon-play"></a>
+              <a role="button" class="audio-player-button small icon-forward"></a>
+            </span>
+          </div>
+        </div>
       );
     }
   }
