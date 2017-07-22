@@ -20,7 +20,7 @@
     right: 0;
     top: 10%;
     bottom: 10%;
-    overflow: auto;
+
 
     .content-title {
       color: white;
@@ -37,6 +37,12 @@
       right: 5%;
       left: 20%;
       bottom: 15%;
+      overflow: auto;
+    }
+
+    content::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
     }
   }
 
