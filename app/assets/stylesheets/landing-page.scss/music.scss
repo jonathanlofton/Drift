@@ -1,7 +1,7 @@
 
 
 .music-landing-page {
-
+ overflow: auto;
   .sidebar {
     position: fixed;
     background: rgba(1,1,1,0.5);
@@ -20,6 +20,7 @@
     right: 0;
     top: 10%;
     bottom: 10%;
+    overflow: auto;
 
     .content-title {
       color: white;
