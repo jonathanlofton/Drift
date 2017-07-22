@@ -11,7 +11,6 @@ class SongIndex extends React.Component {
   }
 
   render(){
-    console.log(this.props);
     const { songs, receiveCurrentSong } = this.props;
     return (
       <ul id="song-index-list">

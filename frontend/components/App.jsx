@@ -5,6 +5,7 @@ import SessionFormContainer from './session/session_form_container';
 import MusicContainer from './music/music_container';
 import HeaderContainer from './header/header_container';
 
+
 const App = () => (
   <div className="everything">
     <header className="header">
@@ -19,6 +20,7 @@ const App = () => (
     <Route path="/login" component={SessionFormContainer} />
     <Route path="/signup" component={SessionFormContainer} />
     <Route path="/music" component={MusicContainer} />
+
 
     <footer className="footer" />
   </div>

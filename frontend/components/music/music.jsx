@@ -4,6 +4,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import ArtistIndexContainer from '../artist/artist_index_container';
 import SongIndexContainer from '../song/song_index_container';
 import AudioPlayerContainer from '../audioplayer/audio_player_container';
+import ArtistShowContainer from '../artist/artist_show_container';
 
 class Music extends React.Component {
   constructor(props) {
@@ -30,7 +31,8 @@ class Music extends React.Component {
             <h1>Content</h1>
           </div>
           <div className="content">
-            <ArtistIndexContainer />
+            <Route exact path="/music/artists" component={ArtistIndexContainer} />
+            <Route exact path="/music/artists/:artistId" component={ArtistShowContainer} />
             <SongIndexContainer />
           </div>
         </div>

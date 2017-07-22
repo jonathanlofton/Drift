@@ -1,13 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ArtistIndexItem = ({ artist }) => (
-  <li className="artist-index-item" >
-    <Link to={`/artists/${artist.id}`}>
-      <img src={artist.image_url} alt={artist.name} />
-      <span> { artist.name } </span>
-    </Link>
-  </li>
-);
+class ArtistIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    
+  }
+
+  render() {
+    const { artist } = this.props;
+    return (
+      <li className="artist-index-item" >
+        <Link to={`/music/artists/${artist.id}`}>
+          <img src={artist.image_url} alt={artist.name} />
+          <span> { artist.name } </span>
+        </Link>
+      </li>
+    );
+  }
+}
 
 export default ArtistIndexItem;

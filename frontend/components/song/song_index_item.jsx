@@ -12,7 +12,6 @@ class SongIndexItem extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const { song } = this.props;
     return (
       <li className="song-item">

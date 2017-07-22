@@ -8,10 +8,8 @@ class AudioPlayer extends React.Component {
   }
 
   render () {
-    console.log(this.props);
     if (this.props.songsArray.playlist.length > 0) {
       const song = this.props.songsArray.playlist[0];
-      console.log(song.song_url);
       return (
         <ReactAudioPlayer
           src={song.song_url}
@@ -21,19 +19,19 @@ class AudioPlayer extends React.Component {
       );
     } else {
       return (
-        <div id="audio-player" class="audio-player-wrapper">
-          <div class="audio-player-image">
-            <span class="audio-player-song-name"></span>
+        <div id="audio-player" className="audio-player-wrapper">
+          <div className="audio-player-image">
+            <span className="audio-player-song-name"></span>
           </div>
 
-          <div class="audio-player-controls">
-            <span class="audio-player-progress">
-              <span class="audio-player-progress-bar"></span>
+          <div className="audio-player-controls">
+            <span className="audio-player-progress">
+              <span className="audio-player-progress-bar"></span>
             </span>
-            <span class="audio-player-button-wrappers">
-              <a role="button" class="audio-player-button small icon-backward"></a>
-              <a role="button" class="audio-player-button audio-player-place-pause-button icon-play"></a>
-              <a role="button" class="audio-player-button small icon-forward"></a>
+            <span className="audio-player-button-wrappers">
+              <a role="button" className="audio-player-button small icon-backward"></a>
+              <a role="button" className="audio-player-button audio-player-place-pause-button icon-play"></a>
+              <a role="button" className="audio-player-button small icon-forward"></a>
             </span>
           </div>
         </div>
