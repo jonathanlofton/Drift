@@ -1,0 +1,57 @@
+.audio-player-container {
+
+  h2 {
+    color: white;
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+  }
+
+  button {
+    color: white;
+  }
+
+  img {
+    height: 40px;
+    width: auto;
+  }
+
+  .howler {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    .song-info {
+      align-self: center;
+      margin-left: 50px;
+    }
+
+    .audio-player-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 300px;
+      height: 100%;
+
+      .react-howler {
+        height: 40px;
+        width: auto;
+      }
+
+      .play-button {
+
+      }
+
+      .loop-button {
+
+      }
+
+
+    }
+
+    .mute-button {
+      align-self: center;
+      margin-right: 50px;
+    }
+  }
+}

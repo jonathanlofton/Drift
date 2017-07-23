@@ -11,73 +11,57 @@ class AudioPlayer extends React.Component {
       loop: false,
     };
     this.handlePlay = this.handlePlay.bind(this);
-    this.handlePause = this.handlePause.bind(this);
     this.playOrPause = this.playOrPause.bind(this);
     this.handleMute = this.handleMute.bind(this);
-    this.handleUnmute = this.handleUnmute.bind(this);
     this.muteOrUnmute = this.muteOrUnmute.bind(this);
     this.handleLoop = this.handleLoop.bind(this);
-    this.handleUnloop = this.handleUnloop.bind(this);
     this.loopOrNot = this.loopOrNot.bind(this);
   }
 
   handleLoop() {
-    this.setState({
-      loop: true,
-    });
-  }
-
-  handleUnloop() {
-    this.setState({
-      loop: false,
-    });
-  }
-
-  loopOrNot() {
     if (this.state.loop) {
-      return <button onClick={this.handleUnloop}>Unloop</button>
+      this.setState({ loop: false });
     } else {
-      return <button onClick={this.handleLoop}>Loop</button>
+      this.setState({ loop: true });
     }
   }
 
-  handleMute() {
-    this.setState({
-      muted: true,
-    })
+  loopOrNot() {
+    const loop = 'http://res.cloudinary.com/jlofton/image/upload/v1500840424/loopbutton_zcvsws.svg';
+    if (this.state.loop) {
+      return <button onClick={this.handleLoop}>Unloop</button>;
+    }
+    return <button onClick={this.handleLoop}><img src={loop} alt="" /></button>;
   }
 
-  handleUnmute() {
-    this.setState({
-      muted: false,
-    })
+  handleMute() {
+    if (this.state.muted) {
+      this.setState({ muted: false });
+    } else {
+      this.setState({ muted: true });
+    }
   }
 
   muteOrUnmute() {
     if (this.state.muted) {
-      return <button onClick={this.handleUnmute}>Unmute</button>
-    } else {
-      return <button onClick={this.handleMute}>Mute</button>
+      return <button onClick={this.handleMute}>Unmute</button>;
     }
+    return <button onClick={this.handleMute}>Mute</button>;
   }
 
   handlePlay() {
-    this.setState({
-      playing: true,
-    });
-  }
-
-  handlePause() {
-    this.setState({
-      playing: false,
-    });
+    if (this.state.playing) {
+      this.setState({ playing: false });
+    } else {
+      this.setState({ playing: true });
+    }
   }
 
   playOrPause() {
     const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
-    const pauseButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500775414/pausetrack_mmx7yk.png';
+    const pauseButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500839806/pauseWhite_sffk70.svg';
     if (this.state.playing) {
-      return <button onClick={this.handlePause}><img src={pauseButton} alt="" /></button>;
+      return <button onClick={this.handlePlay}><img src={pauseButton} alt="" /></button>;
     }
     return <button onClick={this.handlePlay}><img src={playButton} alt="" /></button>;
   }
@@ -85,28 +69,34 @@ class AudioPlayer extends React.Component {
   render() {
     if (this.props.songsArray.playlist.length > 0) {
       const song = this.props.songsArray.playlist[0];
-      console.log(this.props)
       return (
         <div className="howler">
-          <ReactHowler
-            src={song.song_url}
-            playing={this.state.playing}
-            mute={this.state.muted}
-            loop={this.state.loop}
-          />
-          {this.playOrPause()}
-          {this.loopOrNot()}
-          <div className="mute-button">
-            {this.muteOrUnmute()}
-          </div>
           <div className="song-info">
             <h2>{song.title}</h2>
+          </div>
+          <div className="audio-player-buttons">
+            <ReactHowler
+              src={song.song_url}
+              playing={this.state.playing}
+              mute={this.state.muted}
+              loop={this.state.loop}
+              className="react-hower"
+            />
+            <div className="play-button">
+              {this.playOrPause()}
+            </div>
+            <div className="loop-button">
+              {this.loopOrNot()}
+            </div>
+          </div>
+          <div className="mute-button">
+            {this.muteOrUnmute()}
           </div>
         </div>
       );
     } else {
       return (
-        <div>
+        <div className="empty-player">
         </div>
       );
     }

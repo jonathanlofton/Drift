@@ -8,7 +8,6 @@ class AlbumIndexItem extends React.Component {
 
   render() {
     const { album } = this.props;
-    console.log(this.props)
     return (
       <li className="album-item">
         <Link to={`/music/albums/${album.id}`}>

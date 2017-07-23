@@ -2,13 +2,14 @@
 
 .music-landing-page {
  overflow: auto;
+
   .sidebar {
     position: fixed;
     background: rgba(1,1,1,0.5);
     left: 0;
     right: 85%;
     top: 10%;
-    bottom: 10%;
+    bottom: 0;
 
   }
 
@@ -19,7 +20,7 @@
     left: 0;
     right: 0;
     top: 10%;
-    bottom: 10%;
+    bottom: 0;
 
 
     .content-title {
@@ -41,10 +42,22 @@
       overflow: auto;
     }
 
-    content::-webkit-scrollbar-thumb {
-      background-color: darkgrey;
+    .content::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .content::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(40,40,40,0.9);
+      border-radius: 12px;
+    }
+
+    .content::-webkit-scrollbar-thumb {
+      background-color: rgba(100,100,100,0.9);
+      border-radius: 12px;
       outline: 1px solid slategrey;
     }
+
+
   }
 
   .footer {
@@ -58,24 +71,7 @@
       left: 0;
       background: black;
 
-      .howler {
-        display: flex;
-        justify-content: center;
 
-        button {
-          color: white;
-
-        }
-
-        img {
-          height: 40px;
-          width: auto;
-        }
-
-        h2 {
-          color: white;
-        }
-      }
     }
   }
 }

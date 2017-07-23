@@ -12,6 +12,7 @@ class ArtistIndex extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const { artists } = this.props;
     return (
 
