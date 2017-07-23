@@ -5,6 +5,7 @@ import ArtistIndexContainer from '../artist/artist_index_container';
 import SongIndexContainer from '../song/song_index_container';
 import AudioPlayerContainer from '../audioplayer/audio_player_container';
 import ArtistShowContainer from '../artist/artist_show_container';
+import AlbumIndexContainer from '../album/album_index_container';
 
 class Music extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class Music extends React.Component {
             <h1>Your Music</h1>
             <h1>Playlists</h1>
             <Link to="/music/songs"><h1>Songs</h1></Link>
+            <Link to="/music/albums"><h1>Albums</h1></Link>
           </div>
         </div>
 
@@ -31,6 +33,7 @@ class Music extends React.Component {
           <div className="content">
             <Route exact path="/music/artists" component={ArtistIndexContainer} />
             <Route exact path="/music/songs" component={SongIndexContainer} />
+            <Route exact path="/music/albums" component={AlbumIndexContainer} />
           </div>
           <Route exact path="/music/artists/:artistId" component={ArtistShowContainer} />
         </div>

@@ -56,9 +56,26 @@
       bottom: 0;
       right: 0;
       left: 0;
-      background: rgb(24, 24, 24);
+      background: black;
 
+      .howler {
+        display: flex;
+        justify-content: center;
 
+        button {
+          color: white;
+
+        }
+
+        img {
+          height: 40px;
+          width: auto;
+        }
+
+        h2 {
+          color: white;
+        }
+      }
     }
   }
 }
