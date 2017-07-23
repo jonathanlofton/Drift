@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class AlbumIndexItem extends React.Component {
   constructor(props) {
@@ -10,8 +11,10 @@ class AlbumIndexItem extends React.Component {
     console.log(this.props)
     return (
       <li className="album-item">
-        <h1>{album.name}</h1>
-        <img src={album.image_url} alt={album.name}></img>
+        <Link to={`/music/albums/${album.id}`}>
+          <img src={album.image_url} alt={album.name}></img>
+          <h1>{album.name}</h1>
+        </Link>
       </li>
     )
   }
