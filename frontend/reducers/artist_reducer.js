@@ -1,14 +1,17 @@
 import { RECEIVE_ARTISTS, RECEIVE_ARTIST } from '../actions/artist_actions';
-import merge from 'lodash/merge';
 
-const artistReducer = (state = [], action) => {
+const defaultState = {
+  byId: {},
+};
+
+const artistReducer = (state = defaultState, action) => {
   Object.freeze(state);
 
   switch (action.type) {
     case RECEIVE_ARTISTS:
-      return action.artists;
+      return Object.assign({}, state, { byId: action.artists });
     case RECEIVE_ARTIST:
-      return action.artist;
+      return Object.assign({}, state, action.artist);
     default:
       return state;
   }

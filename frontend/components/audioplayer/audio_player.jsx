@@ -74,7 +74,7 @@ class AudioPlayer extends React.Component {
   }
 
   playOrPause() {
-    const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500775074/219712-200_c386us.png';
+    const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
     const pauseButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500775414/pausetrack_mmx7yk.png';
     if (this.state.playing) {
       return <button onClick={this.handlePause}><img src={pauseButton} alt="" /></button>;
