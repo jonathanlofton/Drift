@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import { fetchAlbums } from '../../actions/album_actions';
+import { selectAllAlbums } from '../../reducers/selectors';
 import AlbumIndex from './album_index';
 
 const mapStateToProps = ({ session, albums }) => ({
   currentUser: session.currentUser,
-  albums,
+  albums: selectAllAlbums(albums),
 });
 
 const mapDispatchToProps = dispatch => ({

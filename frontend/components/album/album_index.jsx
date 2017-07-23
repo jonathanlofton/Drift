@@ -1,4 +1,5 @@
 import React from 'react';
+import AlbumIndexItem from './album_index_item';
 
 class AlbumIndex extends React.Component {
   constructor(props) {
@@ -10,11 +11,11 @@ class AlbumIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    const { albums } = this.props;
     return (
-      <div>
-        <h1>Albums</h1>
-      </div>
+      <ul className="album-list">
+        {albums.map(album => <AlbumIndexItem key={album.id} album={album} />)}
+      </ul>
     );
   }
 }
