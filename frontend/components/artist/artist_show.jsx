@@ -8,6 +8,11 @@ class ArtistShow extends React.Component {
     console.log("what the hell");
     const artistId = this.props.match.params.artistId;
     this.props.fetchArtist(artistId);
+    this.handleClick = this.props.receiveCurrentSong.bind(this);
+  }
+
+  handleClick(song){
+    this.props.receiveCurrentSong(song)
   }
 
 
@@ -32,11 +37,11 @@ class ArtistShow extends React.Component {
                     <img src={album.image_url} alt="" className="artist-album-img" />
                     <h1>{album.name}</h1>
                   </li>
-                  <ul>
+                  <ul className="artist-album-song-list">
                     {album.songs.map(song => (
-                      <li>
-                        <button></button>
-                        {song.title}
+                      <li className="artist-album-song-list-item">
+                        <button onClick={() => this.handleClick(song)}>Play</button>
+                        <h1>{song.title}</h1>
                       </li>
                     ))}
                   </ul>
