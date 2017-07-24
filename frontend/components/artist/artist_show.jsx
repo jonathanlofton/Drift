@@ -2,8 +2,8 @@ import React from 'react';
 import ArtistAlbumShow from './artist_show';
 
 
-class ArtistIndex extends React.Component {
-  constructor (props) {
+class ArtistShow extends React.Component {
+  constructor(props) {
     super(props);
     console.log("what the hell");
     const artistId = this.props.match.params.artistId;
@@ -26,11 +26,22 @@ class ArtistIndex extends React.Component {
 
           <div className="artist-show-albums">
             <ul className="artist-album-list">
-              {albums.map(album =>
-                <li className="artist-album-list-item">
-                  <img src={album.image_url} alt="" className="artist-album-img"/>
-                  <h1>{album.name}</h1>
-                </li>
+              {albums.map(album => (
+                <div>
+                  <li className="artist-album-list-item">
+                    <img src={album.image_url} alt="" className="artist-album-img" />
+                    <h1>{album.name}</h1>
+                  </li>
+                  <ul>
+                    {album.songs.map(song => (
+                      <li>
+                        <button></button>
+                        {song.title}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ),
               )}
             </ul>
           </div>
@@ -49,5 +60,5 @@ class ArtistIndex extends React.Component {
 }
 
 
-export default ArtistIndex;
+export default ArtistShow;
 //
