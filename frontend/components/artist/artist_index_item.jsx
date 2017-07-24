@@ -8,7 +8,7 @@ class ArtistIndexItem extends React.Component {
   }
 
   handleClick() {
-    
+
   }
 
   render() {
@@ -17,7 +17,7 @@ class ArtistIndexItem extends React.Component {
       <li className="artist-index-item" >
         <Link to={`/music/artists/${artist.id}`}>
           <img src={artist.image_url} alt={artist.name} />
-          <span> { artist.name } </span>
+           <h1>{ artist.name } </h1>
         </Link>
       </li>
     );

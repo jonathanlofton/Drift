@@ -4,6 +4,8 @@
   .artist-show-banner {
     height: 15em;
     overflow: hidden;
+    box-shadow:0 20px 40px black;
+
 
     h1 {
       position: absolute;
@@ -73,6 +75,10 @@
             padding-bottom: 5px;
 
             button {
+              img {
+                height: 25px;
+                width: 25px;
+              }
 
             }
 

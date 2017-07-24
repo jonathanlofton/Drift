@@ -20,6 +20,7 @@ class ArtistShow extends React.Component {
     if (this.props.artists.albums) {
       const { artists: artist } = this.props;
       const { albums } = this.props.artists;
+      const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
       return (
         <div className="artist-show">
           <div className="artist-show-banner">
@@ -38,7 +39,7 @@ class ArtistShow extends React.Component {
                   <ul className="artist-album-song-list">
                     {album.songs.map(song => (
                       <li className="artist-album-song-list-item">
-                        <button onClick={() => this.handleClick(song)}>Play</button>
+                        <button onClick={() => this.handleClick(song)}><img src={playButton} alt=""/></button>
                         <h1>{song.title}</h1>
                       </li>
                     ))}
