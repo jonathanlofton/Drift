@@ -1,7 +1,7 @@
 .artist-show {
 
+
   .artist-show-banner {
-    margin-left: 15%;
     height: 15em;
     overflow: hidden;
 
@@ -25,26 +25,61 @@
 
 
   .artist-show-albums {
-    margin-left: 15%;
-    overflow: auto;
+    width: 80%;
+
+
     .artist-album-list {
 
-      .artist-album-list-item {
-        margin-top: 9%;
-        margin-left: 11%;
 
-        .artist-album-img {
-          height: 150px;
-          width: 150px;
+      .artist-show-content {
+
+
+
+        .artist-album-list-item {
+          display: flex;
+
+          margin-top: 9%;
+          margin-left: 11%;
+
+          .artist-album-img {
+            height: 150px;
+            width: 150px;
+          }
+
+          h1 {
+            color: white;
+            margin-left: 10px;
+            font-family: helvetica, sans-serif;
+            font-size: 50px;
+            align-self: flex-end;
+
+          }
         }
 
-        h1 {
-          margin-top: 10px;
-          margin-left: 11%;
+        .artist-album-song-list {
+
           color: white;
           font-family: helvetica, sans-serif;
-          font-size: 20px;
+          font-size: 16px;
+          margin-left: 11%;
+          margin-top: 40px;
 
+          .artist-album-song-list-item {
+            display: flex;
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+            padding-left: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            button {
+
+            }
+
+            h1 {
+              margin-left: 20px;
+            }
+          }
         }
       }
     }

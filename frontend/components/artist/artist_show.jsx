@@ -18,10 +18,8 @@ class ArtistShow extends React.Component {
 
   render() {
     if (this.props.artists.albums) {
-      console.log(this.props)
       const { artists: artist } = this.props;
       const { albums } = this.props.artists;
-      console.log(albums)
       return (
         <div className="artist-show">
           <div className="artist-show-banner">
@@ -32,7 +30,7 @@ class ArtistShow extends React.Component {
           <div className="artist-show-albums">
             <ul className="artist-album-list">
               {albums.map(album => (
-                <div>
+                <div className="artist-show-content">
                   <li className="artist-album-list-item">
                     <img src={album.image_url} alt="" className="artist-album-img" />
                     <h1>{album.name}</h1>
@@ -50,7 +48,6 @@ class ArtistShow extends React.Component {
               )}
             </ul>
           </div>
-
         </div>
 
       );

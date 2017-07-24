@@ -9,8 +9,7 @@
     left: 0;
     right: 85%;
     top: 10%;
-    bottom: 0;
-
+    bottom: 10%;
   }
 
   .body {
@@ -20,7 +19,7 @@
     left: 0;
     right: 0;
     top: 10%;
-    bottom: 0;
+    bottom: 10%;
 
 
     .content-title {
@@ -35,12 +34,13 @@
 
     .content {
       position: fixed;
-      top: 20%;
-      right: 5%;
-      left: 20%;
-      bottom: 15%;
+      top: 10%;
+      right: 0;
+      left: 15%;
+      bottom: 10%;
       overflow: auto;
     }
+
 
     .content::-webkit-scrollbar {
       width: 10px;
@@ -69,7 +69,7 @@
       bottom: 0;
       right: 0;
       left: 0;
-      background: black;
+      background: rgba(10,10,10, 0.9);
 
 
     }

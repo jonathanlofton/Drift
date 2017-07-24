@@ -35,8 +35,9 @@ class Music extends React.Component {
             <Route exact path="/music/artists" component={ArtistIndexContainer} />
             <Route exact path="/music/songs" component={SongIndexContainer} />
             <Route exact path="/music/albums" component={AlbumIndexContainer} />
+            <Route exact path="/music/artists/:artistId"component={ArtistShowContainer} />
           </div>
-          <Route exact path="/music/artists/:artistId" component={ArtistShowContainer} />
+
           <Route exact path="/music/albums/:albumId" component={AlbumShowContainer} />
         </div>
 
