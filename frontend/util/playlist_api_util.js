@@ -12,3 +12,11 @@ export const fetchPlaylist = id => (
     url: `/api/playlists/${id}`,
   })
 );
+
+export const createPlaylist = data => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/playlists',
+    data
+  })
+);

@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import ReactDOM from 'react-dom';
 
 const customStyles = {
   overlay : {
@@ -26,16 +25,25 @@ class NewPlaylistModal extends React.Component {
     super(props);
 
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      name: '',
+      // creator_id: this.props.session.currentUser.id,
     };
 
     this.openModal = this.openModal.bind(this);
     // this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  update(property) {
+    return e => this.setState({
+      [property]: e.target.value,
+    });
   }
 
   openModal() {
-    this.setState({modalIsOpen: true});
+    this.setState({ modalIsOpen: true });
   }
   //
   // afterOpenModal() {
@@ -44,29 +52,40 @@ class NewPlaylistModal extends React.Component {
   // }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.setState({ modalIsOpen: false });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const playlist = { name: this.state.name };
+    this.props.createPlaylist(playlist).then(this.closeModal);
   }
 
   render() {
     let formType;
+    console.log(this.props);
     return (
       <div className="new-playlist-button">
-          <button onClick={this.openModal}>New playlist</button>
-          <Modal
+        <button onClick={this.openModal}>New playlist</button>
+        <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
           style={customStyles}
           contentLabel="Session Modal"
-          parentSelector={() => document.body}>
+          parentSelector={() => document.body}
+        >
           <div className="modal-box">
-            <label className="create-playlist-form-label">
-              <input
-                type="text"
-
-                className="create-playlist-input"
-                placeholder="Playlist Name"
-              />
-            </label>
+            <form onSubmit={this.handleSubmit}>
+              <label className="create-playlist-form-label">
+                <input
+                  value={this.state.name}
+                  onChange={this.update('name')}
+                  className="create-playlist-input"
+                  placeholder="Playlist Name"
+                />
+              </label>
+              <input type="submit" className="submit-playlist" placeholder="playlist name" />
+            </form>
           </div>
         </Modal>
       </div>);
@@ -74,6 +93,6 @@ class NewPlaylistModal extends React.Component {
 }
 
 export default NewPlaylistModal;
-// 
+//
 // value={this.state.username}
 // onChange={this.update('username')}
