@@ -17,7 +17,9 @@ const playlistReducer = (state = defaultState, action) => {
     case RECEIVE_PLAYLIST:
       return Object.assign({}, state, { currentPlaylist: action.playlist });
     case ADD_SONG_TO_PLAYLIST:
-      return Object.assign({}, state, { songIds: songIds.push(action.songId)} );
+      return Object.assign({}, state, {
+        songIds: [...state.songIds, action.songId],
+      });
     default:
       return state;
   }

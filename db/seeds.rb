@@ -55,6 +55,8 @@ Artist.destroy_all
 Album.destroy_all
 Song.destroy_all
 User.destroy_all
+Playlist.destroy_all
+PlaylistSong.destroy_all
 
 # User.create(username:, password:)
 # Artist.create(name:, genre:, image_url:)
@@ -109,4 +111,6 @@ visitor = Album.create(name: "Visitor", artist_id: the_dodos.id, genre: the_dodo
 walking = Song.create(title: "Walking", album_id: visitor.id, artist_id: the_dodos.id, genre: the_dodos.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607526/The_Dodos_-_Walking_tvptwk.mp3")
 
 
-Playlist.create(name: "Phils Favorites", creator_id: phil.id)
+phils_playlist = Playlist.create(name: "Phils Favorites", creator_id: phil.id)
+
+playlist_song_1 = PlaylistSong.create(playlist_id: phils_playlist.id, song_id: walking.id)
