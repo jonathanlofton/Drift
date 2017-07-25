@@ -73,7 +73,7 @@ Song.create(title: "Damaged Goods", album_id: gang_of_four_album.id, artist_id: 
 
 
 
-frank_ocean = Artist.create(name: "Frank Ocean", genre: "R & B", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702509/frank-ocean-icon_gkmlsr.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500764060/Frank-Ocean-showpage_ajguje.jpg")
+frank_ocean = Artist.create(name: "Frank Ocean", genre: "R & B", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702509/frank-ocean-icon_gkmlsr.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500913466/frankoceanshowpageblue_tzf7f5.jpg")
 nostalgia = Album.create(name:"Nostalgia Ultra", artist_id: frank_ocean.id, genre: frank_ocean.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608955/frank_ocean_album_wsmy93.jpg")
 Song.create(title: "American Wedding", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607627/12_american_wedding_bxmqf6.mp3")
 Song.create(title: "Novacane", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607626/03_novacane_a5x3ue.mp3")
@@ -87,7 +87,7 @@ rodeo = Album.create(name: "Rodeo", artist_id: travis_scott.id, genre: travis_sc
 Song.create(title: "RaRa" , album_id: rodeo.id, artist_id: travis_scott.id, genre: travis_scott.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607528/Travis_Scott_-_RaRa_ft._Lil_Uzi_Vert_w1a7sw.mp3")
 
 
-User.create(username: "Phil Collins", password: "hotdogs")
+phil = User.create(username: "Phil Collins", password: "hotdogs")
 
 asap_rocky = Artist.create(name: "ASAP ROCKY", genre: "Hip-Hop", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702822/asap-rocky-banner_mgvyhf.png", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500872038/asaprockyshowpage_qjcvh1.jpg")
 
@@ -107,3 +107,6 @@ the_dodos = Artist.create(name: "The DoDos", genre: "indie", image_url: "http://
 visitor = Album.create(name: "Visitor", artist_id: the_dodos.id, genre: the_dodos.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608954/dodos_album_s8bbef.jpg")
 
 walking = Song.create(title: "Walking", album_id: visitor.id, artist_id: the_dodos.id, genre: the_dodos.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607526/The_Dodos_-_Walking_tvptwk.mp3")
+
+
+Playlist.create(name: "Phils Favorites", creator_id: phil.id)
