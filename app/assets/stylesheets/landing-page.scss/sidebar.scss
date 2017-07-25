@@ -1,22 +1,47 @@
+.sidebar {
+  overflow: auto;
+  
 
+  .nav-bar-box {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 15%;
+    margin-top: 40%;
+    font-size: 16px;
+    font-family: helvetica, sans-serif;
+    color: white;
 
-.nav-bar-box {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin-left: 15%;
-  margin-top: 40%;
-  font-size: 16px;
-  font-family: helvetica, sans-serif;
-  color: white;
-  border-bottom: 1px solid white;
+    h1 {
+      padding: 20px;
+    }
 
-  h1 {
-    padding: 20px;
+    .search-button {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+    }
+
+    .sidebar-playlists {
+      border-top: 1px solid white;
+      h1 {
+      }
+    }
   }
 
-  .search-button {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-  }
+
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(40,40,40,0.9);
+  border-radius: 12px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(100,100,100,0.9);
+  border-radius: 12px;
+  outline: 1px solid slategrey;
 }

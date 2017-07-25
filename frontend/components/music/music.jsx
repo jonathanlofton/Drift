@@ -9,6 +9,7 @@ import AlbumShowContainer from '../album/album_show_container';
 import SearchContainer from '../search/search_container';
 import PlaylistContainer from '../playlist/playlist_container';
 import PlaylistShowContainer from '../playlist/playlist_show_container';
+import NewPlaylistModal from '../playlist/new_playlist_modal';
 
 class Music extends React.Component {
   constructor(props) {
@@ -26,9 +27,12 @@ class Music extends React.Component {
             </div>
             <Link to="/music/artists"><h1>Artists</h1></Link>
             <h1>Your Music</h1>
-            <Link to="/music/playlists"><h1>Playlists</h1></Link>
             <Link to="/music/songs"><h1>Songs</h1></Link>
             <Link to="/music/albums"><h1>Albums</h1></Link>
+            <div className="sidebar-playlists">
+              <Link to="/music/playlists"><h1>Playlists</h1></Link>
+              <h1><NewPlaylistModal /></h1>
+            </div>
           </div>
         </div>
 
