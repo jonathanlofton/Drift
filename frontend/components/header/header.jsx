@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 class Header extends React.Component {
   constructor (props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
+    this.currentUser = this.currentUser.bind(this);
   }
 
   componentWillMount() {
@@ -41,7 +42,11 @@ class Header extends React.Component {
           <Link to="/music/artists"><h1 className="App-title">DRIFT</h1></Link>
         </div>
         <div className="header-nav-bar">
-          <div className="header-current-user"></div>
+          <div className="header-current-user">
+            <h1>
+              {this.currentUser}
+            </h1>
+          </div>
           <div className="loginout">{ this.navLink() }</div>
         </div>
       </div>

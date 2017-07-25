@@ -1,4 +1,12 @@
-import { RECEIVE_PLAYLISTS, RECEIVE_PLAYLIST, ADD_SONG_TO_PLAYLIST, ADD_PLAYLIST_TO_LIST } from '../actions/playlist_actions';
+import {
+  RECEIVE_PLAYLISTS,
+  RECEIVE_PLAYLIST,
+  ADD_SONG_TO_PLAYLIST,
+  ADD_PLAYLIST_TO_LIST,
+  ADD_SONGS_TO_PLAYLIST,
+  MAKE_FIRST_SONG_IN_PLAYLIST,
+  LOAD_ARTIST,
+} from '../actions/playlist_actions';
 
 
 const defaultState = {
@@ -20,10 +28,24 @@ const playlistReducer = (state = defaultState, action) => {
       return Object.assign({}, state, {
         songIds: [...state.songIds, action.songId],
       });
+    case ADD_SONGS_TO_PLAYLIST:
+      return Object.assign({}, state, {
+        songIds: action.songs,
+      });
     case ADD_PLAYLIST_TO_LIST:
       const newState = Object.assign({}, state);
       newState.byId[action.playlist.id] = action.playlist;
       return newState;
+    case MAKE_FIRST_SONG_IN_PLAYLIST:
+      return Object.assign({}, state, {
+        songIds: [action.song.id],
+        currentSong: 0,
+      });
+    case LOAD_ARTIST:
+      return Object.assign({}, state, {
+        songIds: action.songIds,
+        currentSong: action.songIds.indexOf(action.songId),
+      });
     default:
       return state;
   }

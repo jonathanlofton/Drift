@@ -1,6 +1,8 @@
 import { values } from 'lodash';
 
-export const selectAllSongs = ( songs ) => values(songs.byId);
+export const selectAllSongs = ( songs ) => (
+  Object.keys(songs.byId).map(id => songs.byId[id])
+)
 
 export const selectAllAlbums = ( albums ) => values(albums.byId);
 

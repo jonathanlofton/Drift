@@ -6,7 +6,6 @@ class ArtistAlbumShow extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <li>
         <h1>well</h1>

@@ -26,10 +26,14 @@ class AudioPlayer extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetchSongs();
+  }
+
   loopOrNot() {
     const loop = 'http://res.cloudinary.com/jlofton/image/upload/v1500840424/loopbutton_zcvsws.svg';
     if (this.state.loop) {
-      return <button onClick={this.handleLoop}>Unloop</button>;
+      return <button onClick={this.handleLoop}><img src={loop} alt="" /></button>;
     }
     return <button onClick={this.handleLoop}><img src={loop} alt="" /></button>;
   }
@@ -67,8 +71,9 @@ class AudioPlayer extends React.Component {
   }
 
   render() {
-    if (this.props.songsArray.playlist.length > 0) {
-      const song = this.props.songsArray.playlist[0];
+    if (this.props.song) {
+      const song = this.props.song;
+      console.log(this.props)
       return (
         <div className="howler">
           <div className="song-info">
@@ -82,8 +87,14 @@ class AudioPlayer extends React.Component {
               loop={this.state.loop}
               className="react-hower"
             />
+            <div className="previous-song">
+              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/leftnext_sozaai.svg" />
+            </div>
             <div className="play-button">
               {this.playOrPause()}
+            </div>
+            <div className="next-song">
+              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/skipright_smz5so.svg" />
             </div>
             <div className="loop-button">
               {this.loopOrNot()}
@@ -95,6 +106,7 @@ class AudioPlayer extends React.Component {
         </div>
       );
     } else {
+      console.log(this.props)
       return (
         <div className="empty-player">
         </div>

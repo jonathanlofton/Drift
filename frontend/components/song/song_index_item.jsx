@@ -8,7 +8,7 @@ class SongIndexItem extends React.Component {
   }
 
   handleClick(e) {
-    this.props.receiveCurrentSong(this.props.song);
+    this.props.makeFirstSongInPlaylist(this.props.song);
   }
 
   render() {
