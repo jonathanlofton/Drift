@@ -15,7 +15,9 @@ class PlaylistShow extends React.Component {
     if (this.props.playlist.currentPlaylist) {
       const { currentPlaylist } = this.props.playlist;
       return (
-        <h1>{currentPlaylist.name}</h1>
+        <div className="playlist-show">
+          <h1>{currentPlaylist.name}</h1>
+        </div>
       )
     }
     return (

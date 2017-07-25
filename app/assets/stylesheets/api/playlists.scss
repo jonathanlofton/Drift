@@ -1,3 +1,24 @@
 // Place all the styles related to the api/playlists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.playlist-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  .playlist-item {
+    color: white;
+    font-family: helvetica, sans-serif;
+    font-size: 40px;
+    margin: 30px;
+  }
+}
+
+.playlist-show {
+  color: white;
+  font-family: helvetica, sans-serif;
+  font-size: 40px;
+  margin: 30px;
+  text-align: center;
+}

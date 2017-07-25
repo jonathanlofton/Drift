@@ -1,0 +1,36 @@
+.modal-box {
+  font-family: helvetica, sans-serif;
+  color: white;
+  font-size: 40px;
+
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+    .create-playlist-form-label {
+      border-bottom: solid 2px #1db954;
+      margin-top: 30px;
+      .create-playlist-input {
+
+      }
+    }
+
+    .submit-playlist {
+      margin: 10px 0px;
+      color: #1db954;
+      border: rgb(0, 204, 102) 2px solid;
+      border-radius: 5px;
+      transition: color 0.3s, border 0.3s;
+      margin-top: 30px;
+    }
+
+    .submit-playlist:hover {
+      color: #1ed760;
+      border: #1ed760 2px solid;
+    }
+  }
+}

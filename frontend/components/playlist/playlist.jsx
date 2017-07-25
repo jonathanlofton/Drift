@@ -17,11 +17,11 @@ class Playlist extends React.Component {
       return (
         <ul className="playlist-index">
           {playlists.byId.map(playlist => (
-            <Link to={`/music/playlists/${playlist.id}`}>
-              <li>
+            <li>
+              <Link to={`/music/playlists/${playlist.id}`} className="playlist-item">
                 {playlist.name}
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
       );
