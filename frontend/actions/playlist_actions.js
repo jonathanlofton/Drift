@@ -71,3 +71,7 @@ export const createPlaylist = data => dispatch => (
     dispatch(addPlaylistToList(playlist))),
   )
 );
+
+export const deletePlaylist = id => dispatch => (
+  APIUtil.deletePlaylist(id)
+);

@@ -11,13 +11,14 @@ class Api::PlaylistsController < ApplicationController
   def create
     @playlist = Playlist.new(playlist_params)
     @playlist.creator_id = current_user.id
+    p @playlist
 
     if @playlist.save
       render '/api/playlists/show'
     else
       render(
-        json: ["Invalid Playlist name"],
-        status: 666
+        json: ["Must be logged in to create playlist"],
+        status: 500
       )
     end
   end
@@ -26,11 +27,11 @@ class Api::PlaylistsController < ApplicationController
     @playlist = Playlist.find(params[:id])
     if @playlist
       @playlist.destroy
-      render '/api/playlists'
+      render '/api/playlists/show'
     else
       render(
         json: ["No Playlist to delete"],
-        status: 666
+        status: 500
       )
     end
 

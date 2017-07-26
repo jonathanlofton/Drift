@@ -106,7 +106,7 @@ class AudioPlayer extends React.Component {
   render() {
     if (this.props.song) {
       const song = this.props.song;
-      console.log(this.props)
+      console.log(this.props);
       return (
         <div className="howler">
           <div className="player-info">

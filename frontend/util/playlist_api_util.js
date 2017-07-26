@@ -17,6 +17,13 @@ export const createPlaylist = data => (
   $.ajax({
     method: 'POST',
     url: '/api/playlists',
-    data
+    data,
+  })
+);
+
+export const deletePlaylist = id => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/playlists/${id}`,
   })
 );

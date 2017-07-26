@@ -21,4 +21,48 @@
   font-size: 40px;
   margin: 30px;
   text-align: center;
+
+  .playlist-info {
+    display: flex;
+    margin-top: 9%;
+    margin-left: 11%;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+
+    h1 {
+      margin-left: 20px;
+      font-size: 50px;
+      align-self: flex-end;
+    }
+  }
+
+  .playlist-song-index {
+    color: white;
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+    margin-left: 11%;
+    margin-top: 40px;
+
+    .playlist-song-item {
+      display: flex;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      padding-left: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      align-items: center;
+
+
+      button {
+        img {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+
 }

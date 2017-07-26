@@ -17,7 +17,7 @@ class ArtistShow extends React.Component {
 
   render() {
     if (this.props.artists.albums) {
-      console.log(this.props)
+      console.log(this.props);
       const { artists: artist } = this.props;
       const { albums } = this.props.artists;
       const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';

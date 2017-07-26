@@ -5,6 +5,10 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :playlists,
+    foreign_key: :creator_id
+
+
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
 

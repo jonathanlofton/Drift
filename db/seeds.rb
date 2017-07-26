@@ -111,6 +111,17 @@ visitor = Album.create(name: "Visitor", artist_id: the_dodos.id, genre: the_dodo
 walking = Song.create(title: "Walking", album_id: visitor.id, artist_id: the_dodos.id, genre: the_dodos.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607526/The_Dodos_-_Walking_tvptwk.mp3")
 
 
-phils_playlist = Playlist.create(name: "Phils Favorites", creator_id: phil.id)
+lacroix_artist = Artist.create(name: "La Croix", genre: "R & B", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501100819/lacroixlime_kk39hy.png", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501101079/lacroixshow_u2wasb.png")
+
+lacroix_album = Album.create(name: "La Croix", artist_id: lacroix_artist.id, genre: lacroix_artist.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501100819/lacroixlime_kk39hy.png")
+
+lacroix_song = Song.create(title: "La Croix Lover", album_id: lacroix_album.id, artist_id: lacroix_artist.id, genre: lacroix_artist.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1501100821/la_chwah_qnd6xa.mp3")
+
+
+
+
+
+
+phils_playlist = Playlist.create(name: "Phils Favorites", creator_id: phil.id, image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501094244/water2_gwbgjc.jpg")
 
 playlist_song_1 = PlaylistSong.create(playlist_id: phils_playlist.id, song_id: walking.id)

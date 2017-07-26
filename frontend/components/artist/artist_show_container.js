@@ -4,8 +4,9 @@ import ArtistShow from './artist_show';
 import { receiveCurrentSong } from '../../actions/audio_player_actions';
 import { addSongsToPlaylist, loadArtist } from '../../actions/playlist_actions';
 
-const mapStateToProps = ({ session, artists }) => ({
-  artists
+const mapStateToProps = ({ session, artists, songs }) => ({
+  songs,
+  artists,
 });
 
 const mapDispatchToProps = dispatch => ({
