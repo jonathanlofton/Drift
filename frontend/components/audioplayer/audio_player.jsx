@@ -16,6 +16,8 @@ class AudioPlayer extends React.Component {
     this.muteOrUnmute = this.muteOrUnmute.bind(this);
     this.handleLoop = this.handleLoop.bind(this);
     this.loopOrNot = this.loopOrNot.bind(this);
+    this.handleSkip = this.handleSkip.bind(this);
+    this.handlePrevious = this.handlePrevious.bind(this);
   }
 
   handleLoop() {
@@ -70,6 +72,14 @@ class AudioPlayer extends React.Component {
     return <button onClick={this.handlePlay}><img src={playButton} alt="" /></button>;
   }
 
+  handleSkip() {
+    this.props.skipSong();
+  }
+
+  handlePrevious() {
+    this.props.previousSong();
+  }
+
   render() {
     if (this.props.song) {
       const song = this.props.song;
@@ -88,13 +98,17 @@ class AudioPlayer extends React.Component {
               className="react-hower"
             />
             <div className="previous-song">
-              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/leftnext_sozaai.svg" />
+              <button onClick={this.handlePrevious}>
+                <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/leftnext_sozaai.svg" />
+              </button>
             </div>
             <div className="play-button">
               {this.playOrPause()}
             </div>
             <div className="next-song">
-              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/skipright_smz5so.svg" />
+              <button onClick={this.handleSkip}>
+                <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/skipright_smz5so.svg" />
+              </button>
             </div>
             <div className="loop-button">
               {this.loopOrNot()}
@@ -108,7 +122,26 @@ class AudioPlayer extends React.Component {
     } else {
       console.log(this.props)
       return (
-        <div className="empty-player">
+        <div className="howler">
+          <div className="song-info">
+          </div>
+          <div className="audio-player-buttons">
+            <div className="previous-song">
+              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/leftnext_sozaai.svg" />
+            </div>
+            <div className="play-button">
+              <img src='http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg' alt="" />
+            </div>
+            <div className="next-song">
+              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501020883/skipright_smz5so.svg" />
+            </div>
+            <div className="loop-button">
+              <img src='http://res.cloudinary.com/jlofton/image/upload/v1500840424/loopbutton_zcvsws.svg' alt="" />
+            </div>
+          </div>
+          <div className="mute-button">
+            <h1>Mute</h1>
+          </div>
         </div>
       );
     }

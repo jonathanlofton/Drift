@@ -19,7 +19,6 @@ class Music extends React.Component {
   render() {
     return (
       <div className="music-landing-page">
-
         <div className="sidebar">
           <div className="nav-bar-box">
             <div className="search-button">

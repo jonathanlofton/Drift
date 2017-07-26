@@ -7,6 +7,8 @@ export const ADD_SONG_TO_PLAYLIST = 'ADD_SONG_TO_PLAYLIST';
 export const ADD_SONGS_TO_PLAYLIST = 'ADD_SONGS_TO_PLAYLIST';
 export const ADD_PLAYLIST_TO_LIST = 'ADD_PLAYLIST_TO_LIST';
 export const MAKE_FIRST_SONG_IN_PLAYLIST = 'MAKE_FIRST_SONG_IN_PLAYLIST';
+export const SKIP_SONG = 'SKIP_SONG';
+export const PREVIOUS_SONG = 'PREVIOUS_SONG';
 
 export const receivePlaylists = playlists => ({
   type: RECEIVE_PLAYLISTS,
@@ -42,6 +44,14 @@ export const loadArtist = (songIds, songId) => ({
   type: LOAD_ARTIST,
   songIds,
   songId,
+});
+
+export const skipSong = () => ({
+  type: SKIP_SONG,
+});
+
+export const previousSong = () => ({
+  type: PREVIOUS_SONG,
 });
 
 export const fetchPlaylists = () => dispatch => (

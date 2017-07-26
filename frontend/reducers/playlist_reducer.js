@@ -6,6 +6,8 @@ import {
   ADD_SONGS_TO_PLAYLIST,
   MAKE_FIRST_SONG_IN_PLAYLIST,
   LOAD_ARTIST,
+  SKIP_SONG,
+  PREVIOUS_SONG,
 } from '../actions/playlist_actions';
 
 
@@ -46,6 +48,14 @@ const playlistReducer = (state = defaultState, action) => {
         songIds: action.songIds,
         currentSong: action.songIds.indexOf(action.songId),
       });
+    case SKIP_SONG:
+      return Object.assign({}, state, {
+        currentSong: state.currentSong + 1,
+      });
+    case PREVIOUS_SONG:
+      return Object.assign({}, state, {
+        currentSong: state.currentSong - 1,
+      })
     default:
       return state;
   }

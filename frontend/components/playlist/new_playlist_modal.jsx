@@ -14,7 +14,7 @@ const customStyles = {
   content : {
     borderRadius          : '0px',
     height                : "30%",
-    width                 : "500px",
+    width                 : "100%",
     top                   : '50%',
     left                  : '50%',
     right                 : 'auto',
@@ -82,13 +82,15 @@ class NewPlaylistModal extends React.Component {
           parentSelector={() => document.body}
         >
           <div className="modal-box">
+            
             <form onSubmit={this.handleSubmit} className="modal-form">
               <label className="create-playlist-form-label">
+                <h2>Playlist Name</h2>
                 <input
                   value={this.state.name}
                   onChange={this.update('name')}
                   className="create-playlist-input"
-                  placeholder="Playlist Name"
+                  placeholder="Start typing..."
                 />
               </label>
               <input type="submit" className="submit-playlist" placeholder="playlist name" />

@@ -2,30 +2,46 @@
   font-family: helvetica, sans-serif;
   color: white;
   font-size: 40px;
+  display: flex;
+  justify-content: center;
+
+  .create-new-playlist-title {
+
+  }
 
   .modal-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 100%;
-    width: 100%;
 
     .create-playlist-form-label {
-      border-bottom: solid 2px #1db954;
-      margin-top: 30px;
-      .create-playlist-input {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
 
+      h2 {
+        font-weight: 100;
+        font-size: 20px;
+        align-self: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .create-playlist-input {
+        text-align: left;
       }
     }
 
     .submit-playlist {
+      font-weight: 100;
       margin: 10px 0px;
-      color: #1db954;
-      border: rgb(0, 204, 102) 2px solid;
+      color: white;
+      border: white 2px solid;
       border-radius: 5px;
       transition: color 0.3s, border 0.3s;
-      margin-top: 30px;
+      margin-top: 20px;
+      width: 300px;
     }
 
     .submit-playlist:hover {
