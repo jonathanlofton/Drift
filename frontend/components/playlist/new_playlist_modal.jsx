@@ -73,7 +73,7 @@ class NewPlaylistModal extends React.Component {
     console.log(this.props);
     return (
       <div className="new-playlist-button">
-        <button onClick={this.openModal}>New playlist</button>
+        <button className="open-modal-button" onClick={this.openModal}>New playlist</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
@@ -82,7 +82,7 @@ class NewPlaylistModal extends React.Component {
           parentSelector={() => document.body}
         >
           <div className="modal-box">
-            
+
             <form onSubmit={this.handleSubmit} className="modal-form">
               <label className="create-playlist-form-label">
                 <h2>Playlist Name</h2>
@@ -102,6 +102,3 @@ class NewPlaylistModal extends React.Component {
 }
 
 export default NewPlaylistModal;
-//
-// value={this.state.username}
-// onChange={this.update('username')}

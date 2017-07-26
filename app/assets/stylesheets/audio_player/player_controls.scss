@@ -18,19 +18,51 @@
   .howler {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 100%;
 
-    .song-info {
-      align-self: center;
-      margin-left: 50px;
+    .player-info {
+      display: flex;
+      align-items: center;
+      width: 30%;
+
+      img {
+        margin-left: 30px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .player-artist-info {
+        align-self: center;
+        margin-left: 10px;
+        color: white;
+
+        .artist-name {
+          font-size: 12px;
+          font-weight: 100;
+          color: lightgray;
+        }
+        .artist-song {
+        }
+      }
+
+      .sound-bar {
+        width: 150px;
+        height: 10px;
+        background-color: white;
+      }
     }
+
+
+
+
 
     .audio-player-buttons {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 300px;
+      width: 30%;
       height: 100%;
 
       .react-howler {
@@ -38,20 +70,46 @@
         width: auto;
       }
 
-      .play-button {
+      .shuffle-button {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
 
+      .previous-song, .next-song {
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+
+      .play-button {
+        img {
+          width: 40px;
+          height: 40px;
+        }
       }
 
       .loop-button {
-
+        img {
+          width: 25px;
+          height: 25px;
+        }
       }
+
 
 
     }
 
     .mute-button {
-      align-self: center;
+      width: 30%;
       margin-right: 50px;
+      img {
+        width: 25px;
+        height: 25px;
+      }
     }
   }
 }

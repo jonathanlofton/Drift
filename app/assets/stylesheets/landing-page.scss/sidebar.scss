@@ -5,24 +5,31 @@
   .nav-bar-box {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left: 10%;
     margin-top: 10%;
     font-size: 16px;
     font-family: helvetica, sans-serif;
-    color: white;
+    color: gray;
 
     h1 {
-      padding: 10px;
+      font-size: 1em;
+      margin: 10px 0;
+      font-weight: 100;
     }
 
     .search-button {
-      border-top: 1px solid white;
-      border-bottom: 1px solid white;
+      font-size: 1.2em;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+
+    .search-button:hover, a:hover {
+      color: white;
     }
 
     .sidebar-playlists {
-      border-top: 1px solid white;
+      border-top: 1px solid gray;
       h1 {
       }
     }
@@ -44,4 +51,8 @@
   background-color: rgba(100,100,100,0.9);
   border-radius: 12px;
   outline: 1px solid slategrey;
+}
+
+.open-modal-button:focus {
+  color: #1db954;
 }
