@@ -9,7 +9,7 @@ class AlbumShow extends React.Component {
   }
 
   handleClick(song) {
-    this.props.loadArtist(this.props.albums.all_songs, song.id)
+    this.props.loadArtist(this.props.albums.all_songs, song.id, song)
   }
 
   render() {

@@ -11,7 +11,7 @@ class PlaylistShow extends React.Component {
   }
 
   handleClick(song){
-    this.props.loadPlaylist(this.props.playlist.currentPlaylist.all_songs, song.id);
+    this.props.loadPlaylist(this.props.playlist.currentPlaylist.all_songs, song.id, song);
   }
 
   handleDelete(id) {

@@ -10,7 +10,7 @@ const mapStateToProps = ({ session, artists, songs }) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchArtist: (id) => dispatch(fetchArtist(id)),
-  loadArtist: (songIds, songId) => dispatch(loadArtist(songIds, songId)),
+  loadArtist: (songIds, songId, songInfo) => dispatch(loadArtist(songIds, songId, songInfo)),
 });
 
 export default connect(

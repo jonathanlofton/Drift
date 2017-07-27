@@ -10,7 +10,7 @@ const mapStateToProps = ({ session, playlist, songs }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchPlaylist: id => dispatch(fetchPlaylist(id)),
-  loadPlaylist: (songIds, songId) => dispatch(loadArtist(songIds, songId)),
+  loadPlaylist: (songIds, songId, songInfo) => dispatch(loadArtist(songIds, songId, songInfo)),
   deletePlaylist: id => dispatch(deletePlaylist(id)),
   deletePlaylistSong: id => dispatch(deletePlaylistSong(id)),
 });

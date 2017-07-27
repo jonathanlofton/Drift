@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactHowler from 'react-howler';
 
-
 class AudioPlayer extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +22,7 @@ class AudioPlayer extends React.Component {
     this.handlePrevious = this.handlePrevious.bind(this);
     this.handleShuffle = this.handleShuffle.bind(this);
     this.shuffleOrNot = this.shuffleOrNot.bind(this);
+
   }
 
   handleLoop() {

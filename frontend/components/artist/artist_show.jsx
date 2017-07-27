@@ -12,7 +12,7 @@ class ArtistShow extends React.Component {
   }
 
   handleClick(song){
-    this.props.loadArtist(this.props.artists.all_songs, song.id);
+    this.props.loadArtist(this.props.artists.all_songs, song.id, song);
   }
 
 
