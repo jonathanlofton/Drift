@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SideBar from './sidebar';
-import { Route, Link } from 'react-router-dom';
+import { fetchPlaylists } from '../../actions/playlist_actions';
 
 const mapStateToProps = ({ session, playlist }) => ({
   session,
@@ -8,6 +8,7 @@ const mapStateToProps = ({ session, playlist }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  fetchPlaylists: () => dispatch(fetchPlaylists()),
 });
 
 export default connect(
