@@ -17,7 +17,13 @@ class SongIndex extends React.Component {
     console.log(this.props)
     return (
       <div className="song-index-content">
-        <h1>Song Page</h1>
+        <div className="photo">
+          <img src="http://res.cloudinary.com/jlofton/image/upload/v1501181191/drifting_photo_for_song_page_vp4ozt.jpg" />
+          <div className="song-index-title">
+            <h1 className="song-index-title-drift">DRIFT.</h1>
+            <h2 className="song-index-title-subheading">to the music...</h2>
+          </div>
+        </div>
         <ul className="song-index-list">
           <div className="table-titles">
             <h1 className="table-title">TITLE</h1>

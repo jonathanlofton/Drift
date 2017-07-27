@@ -1,6 +1,42 @@
 
 .song-index-content {
 
+  .photo {
+
+    height: 400px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0) -20%,rgb(6, 7, 9));
+    img {
+      position: relative;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .song-index-title {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      color: white;
+      font-family: helvetica, sans-serif;
+
+      top: 25%;
+      width: 100%;
+
+      .song-index-title-drift {
+        font-size: 100px;
+        font-weight: 900;
+      }
+      .song-index-title-subheading {
+        font-size: 30px;
+        color: lightgrey;
+      }
+
+    }
+
+
+  }
+
   .table-titles {
     display: flex;
 
