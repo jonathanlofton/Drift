@@ -9,7 +9,7 @@ class NewPlaylistSongForm extends React.Component {
   }
 
   handleClick(playlistId) {
-    this.props.createPlaylistSong({ playlist_song: { playlist_id: playlistId, song_id: this.props.song.id } });
+    this.props.createPlaylistSong({ playlist_song: { playlist_id: playlistId, song_id: this.props.song.id } }).then(this.closeModal);
   }
 
   render () {

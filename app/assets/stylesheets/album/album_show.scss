@@ -4,6 +4,7 @@
 
   margin-top: 9%;
   margin-left: 11%;
+  margin-bottom: 20%;
 
   .album-info {
     display: flex;
@@ -42,10 +43,22 @@
       font-family: helvetica, sans-serif;
       font-size: 16px;
       border-bottom: 1px solid gray;
-      padding: 10px 5px;
+      padding: 5px 5px;
       display: flex;
       align-items: center;
-      
+
+      p {
+        margin-left: 30px;
+      }
+
+      .play-button {
+        margin-left: 0;
+      }
+
+      .modal-button {
+        margin-left: 30px;
+      }
+
       img {
         width: 25px;
         height: 25px;

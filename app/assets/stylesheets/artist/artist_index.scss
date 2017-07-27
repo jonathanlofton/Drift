@@ -4,6 +4,7 @@
   .artist-index-list {
     display: flex;
     flex-flow: wrap;
+    justify-content: center;
 
     .artist-index-item {
       margin: 30px;

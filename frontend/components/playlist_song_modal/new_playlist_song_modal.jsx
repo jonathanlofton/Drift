@@ -6,20 +6,19 @@ import NewPlaylistSongFormContainer from './new_playlist_song_modal_form_contain
 
 
 const customStyles = {
-  // overlay : {
-  //   background-color : rgba(0, 0 ,0 , 0.8)
-  // },
+  overlay : {
+    backgroundColor: 'rgba(0, 0 ,0 , 0)'
+  },
   content : {
     borderRadius          : '4px',
     height                : "300px",
-    width                 : "300px",
+    width                 : "200px",
     top                   : '50%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
-    border                : '2px solid #ccc',
     background            : 'rgba(40, 40, 40, 1)',
   }
 };

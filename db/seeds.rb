@@ -64,21 +64,21 @@ PlaylistSong.destroy_all
 # Song.create(title: , album_id:, artist_id:, genre:, song_url:)
 
 mac_demarco = Artist.create(name: "Mac Demarco", genre: "Indie", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702509/mac_demarco_show_page_mk9jgh.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500871852/maxresdefaultshowpage_rvfukn.jpg")
-salad_days = Album.create(name: "Salad Days", artist_id: mac_demarco.id, genre: mac_demarco.id, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608955/mac_demarco_salad_days_r23ahk.jpg")
-Song.create(title: "Blue Boy", album_id: salad_days.id , artist_id: mac_demarco.id, genre: mac_demarco.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607523/Mac_DeMarco_-_Blue_Boy_x4aori.mp3")
+salad_days = Album.create(name: "Salad Days", artist_id: mac_demarco.id, genre: mac_demarco.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608955/mac_demarco_salad_days_r23ahk.jpg")
+blue_boy = Song.create(title: "Blue Boy", album_id: salad_days.id , artist_id: mac_demarco.id, genre: mac_demarco.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607523/Mac_DeMarco_-_Blue_Boy_x4aori.mp3")
 
 
 gang_of_four = Artist.create(name: "Gang of Four", genre: "Punk", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702510/gang_of_four_photo_afwkva.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500871701/2355_the_clashshowpage_xp35ct.jpg")
 gang_of_four_album = Album.create(name: "Gang of Four", artist_id:gang_of_four.id, genre: gang_of_four.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608954/gang_of_four_album_qi9zmt.jpg")
-Song.create(title: "Damaged Goods", album_id: gang_of_four_album.id, artist_id: gang_of_four.id, genre: gang_of_four.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607528/Gang_of_Four_-_Damaged_Goods_EMI_Version_vhpy9r.mp3")
+Song.create(title: "Damaged Goods", album_id: gang_of_four_album.id, artist_id: gang_of_four.id, genre: gang_of_four.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607528/Gang_of_Four_-_Damaged_Goods_EMI_Version_vhpy9r.mp3")
 
 
 
 
 frank_ocean = Artist.create(name: "Frank Ocean", genre: "R & B", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702509/frank-ocean-icon_gkmlsr.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500765510/Frank-Ocean-showpage_ajguje.jpg")
 nostalgia = Album.create(name:"Nostalgia Ultra", artist_id: frank_ocean.id, genre: frank_ocean.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608955/frank_ocean_album_wsmy93.jpg")
-Song.create(title: "American Wedding", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607627/12_american_wedding_bxmqf6.mp3")
-Song.create(title: "Novacane", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607626/03_novacane_a5x3ue.mp3")
+Song.create(title: "American Wedding", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607627/12_american_wedding_bxmqf6.mp3")
+novacane = Song.create(title: "Novacane", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607626/03_novacane_a5x3ue.mp3")
 Song.create(title: "Swim Good", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607625/10_swim_good_atxtsi.mp3")
 Song.create(title: "We all try", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607625/04_we_all_try_yfmrz8.mp3")
 Song.create(title: "Nature feels", album_id: nostalgia.id, artist_id: frank_ocean.id, genre: frank_ocean.genre, song_url:"http://res.cloudinary.com/jlofton/video/upload/v1500607620/14_nature_feels_rkay3c.mp3")
@@ -98,11 +98,11 @@ live_love_asap = Album.create(name: "Live. Love. ASAP", artist_id: asap_rocky.id
 kissin_pink = Song.create(title: "Kissin' Pink", album_id: live_love_asap.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500502810/10_-_ASAP_Rocky-Kissin_Pink_Feat_ASAP_Ferg_Prod_By_Beautiful_Lou_ntsgpp.mp3", genre: live_love_asap.genre, artist_id: asap_rocky.id)
 
 
-whitest_boy_alive = Artist.create(name: "Whitest Boy Alive", genre: "indie", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500767490/whitest_boy_photo_mer48c.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500764175/whitestboy_ojeuta.jpg")
+whitest_boy_alive = Artist.create(name: "whitest Boy Alive", genre: "indie", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500767490/whitest_boy_photo_mer48c.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500764175/whitestboy_ojeuta.jpg")
 
 burning = Album.create(name: "Burning", artist_id: whitest_boy_alive.id, genre: whitest_boy_alive.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500608956/whitest_boy_album_qfzmjn.jpg")
 
-burning_song = Song.create(title: "Burning", album_id: burning.id, artist_id: whitest_boy_alive.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607522/The_Whitest_Boy_Alive_-_Burning_eucjy4.mp3", genre: burning.genre )
+burning_song = Song.create(title: "Burning", album_id: burning.id, artist_id: whitest_boy_alive.id, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1500607522/The_whitest_Boy_Alive_-_Burning_eucjy4.mp3", genre: burning.genre )
 
 the_dodos = Artist.create(name: "The DoDos", genre: "indie", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500702511/the_dodos_photo_gwzwzo.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1500872153/Dodos-showpage_yibdjw.jpg")
 
@@ -124,4 +124,8 @@ lacroix_song = Song.create(title: "La Croix Lover", album_id: lacroix_album.id, 
 
 phils_playlist = Playlist.create(name: "Phils Favorites", creator_id: phil.id, image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501094244/water2_gwbgjc.jpg")
 
-playlist_song_1 = PlaylistSong.create(playlist_id: phils_playlist.id, song_id: walking.id)
+PlaylistSong.create(playlist_id: phils_playlist.id, song_id: lacroix_song.id)
+PlaylistSong.create(playlist_id: phils_playlist.id, song_id: walking.id)
+PlaylistSong.create(playlist_id: phils_playlist.id, song_id: burning_song.id)
+PlaylistSong.create(playlist_id: phils_playlist.id, song_id: novacane.id)
+PlaylistSong.create(playlist_id: phils_playlist.id, song_id: blue_boy.id)

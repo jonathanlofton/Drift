@@ -14,6 +14,7 @@ import NewPlaylistModalContainer from '../playlist/new_playlist_modal_container'
 class Music extends React.Component {
   constructor(props) {
     super(props);
+    this.props.fetchPlaylists();
   }
 
   render() {

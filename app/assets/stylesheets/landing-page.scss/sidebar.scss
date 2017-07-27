@@ -10,7 +10,7 @@
     margin-top: 10%;
     font-size: 16px;
     font-family: helvetica, sans-serif;
-    color: white;
+    color: lightgray;
 
     h1 {
       font-size: 1em;
@@ -20,16 +20,16 @@
 
     .search-button {
       font-size: 1.2em;
-      border-top: 1px solid white;
-      border-bottom: 1px solid white;
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
     }
 
     .search-button:hover, a:hover {
-      color: #1db954;
+      color: white;
     }
 
     .sidebar-playlists {
-      border-top: 1px solid white;
+      border-top: 1px solid lightgray;
       h1 {
       }
     }
@@ -53,6 +53,6 @@
   outline: 1px solid slategrey;
 }
 
-.open-modal-button:focus {
-  color: #1db954;
+.open-modal-button:hover {
+  color: white;
 }

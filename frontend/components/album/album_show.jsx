@@ -30,9 +30,9 @@ class AlbumShow extends React.Component {
             <ul className="album-song-index">
               {songs.map(song => (
                 <li className="album-song-item">
-                  <button onClick={() => this.handleClick(song)}><img src={playButton} /></button>
-                  <PlaylistSongModal song={song} className="add-song-to-playlist-modal" />
-                  {song.title}
+                  <button onClick={() => this.handleClick(song)} className="play-button"><img src={playButton} /></button>
+                  <PlaylistSongModal song={song} className="add-song-to-playlist-modal" className="modal-button"/>
+                  <p>{song.title}</p>
                 </li>
               ))}
             </ul>

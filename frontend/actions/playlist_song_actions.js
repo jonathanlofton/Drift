@@ -29,3 +29,7 @@ export const fetchPlaylistSong = id => dispatch => (
 export const createPlaylistSong = (playlistId, songId) => dispatch => (
   APIUtil.createPlaylistSong(playlistId, songId).then(playlistSong => dispatch(receivePlaylistSong(playlistSong)))
 );
+
+export const deletePlaylistSong = playlistSongId => (
+  APIUtil.deletePlaylistSong(playlistSongId)
+)

@@ -41,6 +41,7 @@ class NewPlaylistModal extends React.Component {
     // this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.randomPhotoGenerator = this.randomPhotoGenerator.bind(this);
   }
 
   update(property) {
@@ -64,8 +65,23 @@ class NewPlaylistModal extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const playlist = { name: this.state.name };
+    const playlist = { name: this.state.name, image_url: this.randomPhotoGenerator };
     this.props.createPlaylist(playlist).then(this.closeModal);
+  }
+
+  randomPhotoGenerator() {
+    const water = "https://res.cloudinary.com/jlofton/image/upload/v1501136736/water_duknw4.jpg";
+    const palm = "http://res.cloudinary.com/jlofton/image/upload/v1501136697/palm_tree_pseug1.jpg";
+    const bike = "http://res.cloudinary.com/jlofton/image/upload/v1501136555/bike_photo_xxyvxq.jpg";
+    const lighthouse = "http://res.cloudinary.com/jlofton/image/upload/v1501136597/lighthouse_qymuzu.jpg";
+    const roadtrip = "http://res.cloudinary.com/jlofton/image/upload/v1501136661/roadtrip_s3wpfi.jpg";
+    const waterfall = "http://res.cloudinary.com/jlofton/image/upload/v1501136627/waterfall_lfdenu.jpg";
+    const seagull = "https://res.cloudinary.com/jlofton/image/upload/v1501136928/seagulls_poebsl.jpg";
+
+    const arrayOfPhotos = [water, palm, bike, lighthouse, roadtrip, waterfall, seagull];
+
+    const photo = arrayOfPhotos[Math.floor(Math.random()*arrayOfPhotos.length)];
+    return photo;
   }
 
   render() {
