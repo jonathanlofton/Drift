@@ -37,9 +37,12 @@
           margin: 0 10px;
           color: gray;
         }
+
+
+
         .table-title {
           align-self: flex-start;
-          margin-left: 65px;
+          margin-left: 11%;
           margin-bottom: 5px;
         }
 
@@ -78,6 +81,8 @@
             align-self: flex-end;
 
           }
+
+
         }
 
         .artist-album-song-list {
@@ -96,6 +101,10 @@
             padding-bottom: 5px;
             align-items: center;
 
+            .play-button {
+              margin-right: 3%s;
+            }
+
             .song-title {
               position: absolute;
               margin-left: 8%;
@@ -110,6 +119,8 @@
               position: absolute;
               margin-left: 50%;
             }
+
+            
 
             button {
               img {

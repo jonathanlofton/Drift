@@ -6,6 +6,7 @@ import NewPlaylistSongForm from './new_playlist_song_modal_form';
 const mapStateToProps = ({ playlist }, ownProps) => ({
   playlist,
   song: ownProps.song,
+  closeModal: ownProps.closeModal,
 });
 
 

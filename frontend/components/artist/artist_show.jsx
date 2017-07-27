@@ -45,7 +45,7 @@ class ArtistShow extends React.Component {
                     </div>
                     {album.songs.map((song, idx) => (
                       <li className="artist-album-song-list-item" key={idx}>
-                        <button onClick={() => this.handleClick(song)}><img src={playButton} alt=""/></button>
+                        <button onClick={() => this.handleClick(song)} className="play-button"><img src={playButton} alt=""/></button>
                         <PlaylistSongModal song={song}/>
                         <h1 className="song-title">{song.title}</h1>
                         <h1 className="artist-name">{artist.name}</h1>

@@ -36,28 +36,63 @@
 
   .album-song-index {
     margin-top: 80px;
-    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
     width: 75%;
+
+    .table-titles {
+      display: flex;
+      color: gray;
+      font-family: helvetica, sans-serif;
+
+      .table-title {
+        margin-left: 16%;
+      }
+
+      .table-artist {
+        position: absolute;
+        margin-left: 31%;
+      }
+
+      .created-at {
+        position: absolute;
+        margin-left: 50%;
+      }
+    }
+
+
     .album-song-item {
       color: white;
       font-family: helvetica, sans-serif;
       font-size: 16px;
-      border-bottom: 1px solid gray;
+      border-top: 1px solid gray;
       padding: 5px 5px;
       display: flex;
       align-items: center;
 
-      p {
-        margin-left: 30px;
-      }
-
       .play-button {
-        margin-left: 0;
+        margin-right: 10px;
       }
 
       .modal-button {
         margin-left: 30px;
       }
+
+      .song-title {
+        position: absolute;
+        margin-left: 10%;
+      }
+
+      .artist-name {
+        position: absolute;
+        margin-left: 30%;
+      }
+
+      .created-at {
+        position: absolute;
+        margin-left: 50%;
+      }
+
+
 
       img {
         width: 25px;

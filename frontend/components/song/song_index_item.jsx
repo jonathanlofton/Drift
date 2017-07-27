@@ -18,9 +18,11 @@ class SongIndexItem extends React.Component {
     console.log(this.props)
     return (
       <li className="song-item">
-        <PlaylistSongModal song={song}/>
         <button onClick={() => this.handleClick(song)} className="play-button"><img src={playButton} /></button>
-        <p>{song.title}</p>
+        <PlaylistSongModal song={song} className="modal-button"/>
+        <p className="song-title">{song.title}</p>
+        <p className="artist-name">{song.artist.name}</p>
+        <p className="created-at">{song.created_at.slice(0, 10)}</p>
       </li>
     );
   }

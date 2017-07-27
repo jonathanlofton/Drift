@@ -61,7 +61,7 @@ class PlaylistSongModal extends React.Component {
             onRequestClose={this.closeModal}
             style={customStyles}
             contentLabel="Add song to playlist">
-            <NewPlaylistSongFormContainer song={this.props.song} />
+            <NewPlaylistSongFormContainer song={this.props.song} closeModal={this.closeModal}/>
           </Modal>
         </div>
       </div>

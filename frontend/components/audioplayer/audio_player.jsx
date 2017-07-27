@@ -11,6 +11,8 @@ class AudioPlayer extends React.Component {
       loop: false,
       shuffle: false,
     };
+
+
     this.handlePlay = this.handlePlay.bind(this);
     this.playOrPause = this.playOrPause.bind(this);
     this.handleMute = this.handleMute.bind(this);
@@ -33,6 +35,8 @@ class AudioPlayer extends React.Component {
 
   componentDidMount() {
     this.props.fetchSongs();
+    this.props.fetchArtist(this.props.song.artist_id);
+    this.props.fetchAlbum(this.props.song.album_id);
   }
 
   loopOrNot() {

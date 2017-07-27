@@ -28,11 +28,18 @@ class AlbumShow extends React.Component {
               </div>
             </div>
             <ul className="album-song-index">
+              <div className="table-titles">
+                <h1 className="table-title">TITLE</h1>
+                <h1 className="table-artist">ARTIST</h1>
+                <h1 className="created-at">CREATED AT</h1>
+              </div>
               {songs.map(song => (
                 <li className="album-song-item">
                   <button onClick={() => this.handleClick(song)} className="play-button"><img src={playButton} /></button>
-                  <PlaylistSongModal song={song} className="add-song-to-playlist-modal" className="modal-button"/>
-                  <p>{song.title}</p>
+                  <PlaylistSongModal song={song}  className="modal-button"/>
+                  <p className="song-title">{song.title}</p>
+                  <p className="artist-name">{this.props.albums.artist}</p>
+                  <p className="created-at">{song.created_at.slice(0, 10)}</p>
                 </li>
               ))}
             </ul>
