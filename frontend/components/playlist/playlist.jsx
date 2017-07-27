@@ -14,14 +14,19 @@ class Playlist extends React.Component {
   render() {
     if (this.props.playlists.byId.length > 0) {
       const { playlists } = this.props;
+      console.log(this.props)
       return (
         <div className="playlist-index-content">
           <h1 className="playlist-index-title">Playlists</h1>
           <ul className="playlist-index">
             {playlists.byId.map(playlist => (
-              <li>
-                <Link to={`/music/playlists/${playlist.id}`} className="playlist-item">
-                  {playlist.name}
+              <li className="playlist-list-item">
+                <Link to={`/music/playlists/${playlist.id}`} className="playlist-link">
+                  <img src={playlist.image_url} alt={playlist.name} className="playlist-photo"/>
+                  <div className="playlist-info">
+                    <h1 className="playlist-name">{playlist.name}</h1>
+                    <h1 className="playlist-creator">By: {playlist.creator}</h1>
+                  </div>
                 </Link>
               </li>
             ))}
@@ -30,8 +35,8 @@ class Playlist extends React.Component {
       );
     } else {
       return (
-        <ul className="playlist-index">
-          <h1>Playlist</h1>
+        <ul className="playlist-index-content">
+          <h1 className="playlist-index-title">Playlists</h1>
         </ul>
       );
     }

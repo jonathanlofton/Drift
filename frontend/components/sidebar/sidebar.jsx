@@ -29,7 +29,7 @@ class SideBar extends React.Component {
           <div className="sidebar-playlists">
             <h1><NewPlaylistModalContainer /></h1>
             <ul className="sidebar-playlist-list">
-              { byId.map( playlist => (
+              { byId.map(playlist => (
                 <li key={playlist.id} className="sidebar-playlist-list-item">
                   <Link to={`/music/playlists/${playlist.id}`}>
                     <h1>{playlist.name}</h1>

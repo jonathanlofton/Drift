@@ -17,15 +17,36 @@
 
 .playlist-index {
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
   align-items: center;
   margin-top: 30px;
 
-  .playlist-item {
+  .playlist-list-item {
     color: white;
     font-family: helvetica, sans-serif;
     font-size: 20px;
     margin: 30px;
+
+
+    .playlist-photo {
+      width: 150px;
+      height: 150px;
+    }
+
+    .playlist-info {
+      position: absolute;
+      
+
+      .playlist-name {
+        font-size: 22px;
+      }
+
+      .playlist-creator {
+        font-size: 14px;
+        color: gray;
+      }
+    }
+
   }
 
   .playlist-item:hover {

@@ -18,6 +18,14 @@ class PlaylistShow extends React.Component {
     this.props.deletePlaylist(id).then((data) => this.props.history.push('/music/playlists'));
   }
 
+  componentWillReceiveProps(newProps) {
+    const currentUrl = this.props.match.params.playlistId;
+    const newUrl = newProps.match.params.playlistId;
+    if (currentUrl !== newUrl ) {
+      this.props.fetchPlaylist(newUrl);
+    }
+  }
+
   handleDeleteSong(id) {
     this.props.deletePlaylistSong(id);
   }

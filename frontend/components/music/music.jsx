@@ -21,7 +21,7 @@ class Music extends React.Component {
     return (
       <div className="music-landing-page">
         <div className="sidebar">
-          <SideBarContainer />
+          <Route path="/music" component={SideBarContainer} />
         </div>
         <div className="body">
           <div className="content">
