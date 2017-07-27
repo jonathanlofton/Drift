@@ -20,7 +20,6 @@ class PlaylistShow extends React.Component {
 
   render() {
     if (this.props.playlist.currentPlaylist) {
-      console.log(this.props)
       const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
       const { currentPlaylist } = this.props.playlist;
       const { songs } = currentPlaylist;
@@ -28,14 +27,18 @@ class PlaylistShow extends React.Component {
         <div className="playlist-show">
           <div className="playlist-info">
             <img src={currentPlaylist.image_url} />
-            <h1>{currentPlaylist.name}</h1>
-            <button className="playlist-delete-button" onClick={() => this.handleDelete(currentPlaylist.id)}>Delete</button>
+            <div className="playlist-title-and-delete">
+              <button className="playlist-delete-button" onClick={() => this.handleDelete(currentPlaylist.id)}>Delete</button>
+              <h1 className="playlist-title">{currentPlaylist.name}</h1>
+            </div>
           </div>
 
           <ul className="playlist-song-index">
             { songs.map((song, idx) => (
               <li key={idx} className="playlist-song-item">
-                <button onClick={() => this.handleClick(song)}><img src={playButton} /></button>
+                <button onClick={() => this.handleClick(song)}>
+                  <img src={playButton} />
+                </button>
                 {song.title}
               </li>
             ))}

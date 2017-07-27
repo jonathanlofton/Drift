@@ -1,6 +1,20 @@
 // Place all the styles related to the api/playlists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.playlist-index-content {
+
+  .playlist-index-title {
+    color: white;
+    font-size: 60px;
+    font-family: helvetica, sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    font-weight: 900;
+  }
+}
+
+
+
 .playlist-index {
   display: flex;
   flex-direction: column;
@@ -10,8 +24,12 @@
   .playlist-item {
     color: white;
     font-family: helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     margin: 30px;
+  }
+
+  .playlist-item:hover {
+    color: #1db954;
   }
 }
 
@@ -32,10 +50,27 @@
       height: 150px;
     }
 
-    h1 {
-      margin-left: 20px;
-      font-size: 50px;
-      align-self: flex-end;
+    .playlist-title-and-delete {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .playlist-title {
+        margin-left: 20px;
+        font-size: 30px;
+        align-self: flex-end;
+      }
+
+      .playlist-delete-button {
+        align-self: flex-start;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: 100;
+      }
+
+      .playlist-delete-button:hover {
+        color: red;
+      }
     }
   }
 
@@ -45,12 +80,12 @@
     font-size: 16px;
     margin-left: 11%;
     margin-top: 40px;
+    width: 70%;
 
     .playlist-song-item {
       display: flex;
       border-top: 1px solid grey;
       border-bottom: 1px solid grey;
-      padding-left: 30px;
       padding-top: 5px;
       padding-bottom: 5px;
       align-items: center;
@@ -60,6 +95,7 @@
         img {
           height: 25px;
           width: 25px;
+          margin-right: 40px;
         }
       }
     }

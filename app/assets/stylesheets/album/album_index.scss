@@ -1,20 +1,33 @@
 
-.album-list {
-  display: flex;
+.album-content-page {
 
-  .album-item {
-    padding: 20px;
+  .album-title {
+    position: relative;
+    font-size: 60px;
+    color: white;
+    font-weight: 100;
+    font-family: helvetica, sans-serif;
+    text-align: center;
+  }
 
-    img {
-      height: 200px;
-      width: 200px;
-    }
+  .album-list {
+    margin-top: 5%;
+    display: flex;
 
-    h1 {
-      color: white;
-      font-family: helvetica, sans-serif;
-      text-align: center;
-      margin-top: 10px;
+    .album-item {
+      padding: 20px;
+
+      img {
+        height: 200px;
+        width: 200px;
+      }
+
+      h1 {
+        color: white;
+        font-family: helvetica, sans-serif;
+        text-align: center;
+        margin-top: 10px;
+      }
     }
   }
 }

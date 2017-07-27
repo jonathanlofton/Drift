@@ -105,8 +105,8 @@ class AudioPlayer extends React.Component {
 
   render() {
     if (this.props.song) {
+      console.log(this.props)
       const song = this.props.song;
-      console.log(this.props);
       return (
         <div className="howler">
           <div className="player-info">
@@ -156,12 +156,12 @@ class AudioPlayer extends React.Component {
         </div>
       );
     } else {
-      console.log(this.props)
       return (
         <div className="howler">
           <div className="song-info">
           </div>
           <div className="audio-player-buttons">
+            <div></div>
             <div className="shuffle-button">
               <img src="http://res.cloudinary.com/jlofton/image/upload/v1501045538/whiteshuffle_cyvwth.svg"/>
             </div>
@@ -180,6 +180,9 @@ class AudioPlayer extends React.Component {
           </div>
           <div className="mute-button">
             <img src="http://res.cloudinary.com/jlofton/image/upload/v1501043789/greenmutebutton_ymfriv.svg" />
+          </div>
+          <div className="sound-bar">
+
           </div>
         </div>
       );

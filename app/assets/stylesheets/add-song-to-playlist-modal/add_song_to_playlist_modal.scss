@@ -1,0 +1,41 @@
+.new-playlist-song-form {
+
+  .modal-form {
+
+    .create-playlist-form-label {
+
+      .add-song-to-playlist-title {
+        font-family: helvetica, sans-serif;
+        font-size: 30px;
+        text-align: center;
+        font-weight: 900;
+        color: white;
+
+
+      }
+      .playlist-list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .playlist-item {
+          color: gray;
+          font-family: helvetica, sans-serif;
+          font-size: 16px;
+          border-radius: 1px;
+          padding: 5px;
+          width: 100%;
+          text-align: center;
+          font-weight: 900;
+          margin: 2px;
+        }
+
+        .playlist-item:hover {
+          background: rgb(60,60,60);
+          color: white;
+        }
+      }
+    }
+  }
+}

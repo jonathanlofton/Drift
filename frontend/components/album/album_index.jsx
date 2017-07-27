@@ -13,9 +13,13 @@ class AlbumIndex extends React.Component {
   render() {
     const { albums } = this.props;
     return (
-      <ul className="album-list">
-        {albums.map(album => <AlbumIndexItem key={album.id} album={album} />)}
-      </ul>
+      <div className="album-content-page">
+        <h1 className="album-title">Albums</h1>
+        <ul className="album-list">
+          {albums.map(album => <AlbumIndexItem key={album.id} album={album} />)}
+        </ul>
+      </div>
+
     );
   }
 }

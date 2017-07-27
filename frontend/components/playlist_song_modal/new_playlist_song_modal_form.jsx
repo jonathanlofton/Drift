@@ -13,22 +13,20 @@ class NewPlaylistSongForm extends React.Component {
   }
 
   render () {
-    console.log(this.props)
     const playlists = this.props.playlist.byId;
     return (
       <div className="new-playlist-song-form">
         <form onSubmit={this.handleSubmit} className="modal-form">
           <label className="create-playlist-form-label">
-            <h1>Playlists</h1>
-            <ul>
+            <h1 className="add-song-to-playlist-title">Playlists</h1>
+            <ul className="playlist-list">
               {playlists.map(playlist => (
-                <li>
+                <li className="playlist-item">
                   <button onClick={() => this.handleClick(playlist.id)}>{playlist.name}</button>
                 </li>
               ))}
             </ul>
           </label>
-          <input type="submit" className="submit-playlist" placeholder="playlist name" />
         </form>
       </div>
     )

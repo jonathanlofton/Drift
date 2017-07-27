@@ -12,13 +12,17 @@ class SongIndex extends React.Component {
   }
 
   render(){
-    const { songs, makeFirstSongInPlaylist } = this.props;
+    const { songs, loadArtist, songIds } = this.props;
     console.log(this.props)
     return (
-      <ul id="song-index-list">
-        {songs.map(song => <SongIndexItem key={song.id} song={song}
-          makeFirstSongInPlaylist={makeFirstSongInPlaylist}/>)}
-      </ul>
+      <div className="song-index-content">
+        <h1>Song Page</h1>
+        <ul className="song-index-list">
+          {songs.map(song => <SongIndexItem key={song.id} song={song}
+            loadArtist={loadArtist} songIds={songIds} />)}
+        </ul>
+      </div>
+
     )
   }
 }

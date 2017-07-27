@@ -1,5 +1,6 @@
 import React from 'react';
 import ArtistAlbumShow from './artist_show';
+import PlaylistSongModal from '../playlist_song_modal/new_playlist_song_modal';
 
 
 class ArtistShow extends React.Component {
@@ -17,7 +18,6 @@ class ArtistShow extends React.Component {
 
   render() {
     if (this.props.artists.albums) {
-      console.log(this.props);
       const { artists: artist } = this.props;
       const { albums } = this.props.artists;
       const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
@@ -41,6 +41,7 @@ class ArtistShow extends React.Component {
                       <li className="artist-album-song-list-item" key={idx}>
                         <button onClick={() => this.handleClick(song)}><img src={playButton} alt=""/></button>
                         <h1>{song.title}</h1>
+                        <PlaylistSongModal song={song}/>
                       </li>
                     ))}
                   </ul>

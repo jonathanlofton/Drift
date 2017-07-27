@@ -10,7 +10,7 @@
     margin-top: 10%;
     font-size: 16px;
     font-family: helvetica, sans-serif;
-    color: gray;
+    color: white;
 
     h1 {
       font-size: 1em;
@@ -20,16 +20,16 @@
 
     .search-button {
       font-size: 1.2em;
-      border-top: 1px solid gray;
-      border-bottom: 1px solid gray;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
     }
 
     .search-button:hover, a:hover {
-      color: white;
+      color: #1db954;
     }
 
     .sidebar-playlists {
-      border-top: 1px solid gray;
+      border-top: 1px solid white;
       h1 {
       }
     }

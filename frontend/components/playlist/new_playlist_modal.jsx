@@ -70,7 +70,6 @@ class NewPlaylistModal extends React.Component {
 
   render() {
     let formType;
-    console.log(this.props);
     return (
       <div className="new-playlist-button">
         <button className="open-modal-button" onClick={this.openModal}>New playlist</button>

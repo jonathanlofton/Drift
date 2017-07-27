@@ -19,7 +19,8 @@ const customStyles = {
     bottom                : 'auto',
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
-    border                : '2px solid #ccc'
+    border                : '2px solid #ccc',
+    background            : 'rgba(40, 40, 40, 1)',
   }
 };
 
@@ -50,11 +51,12 @@ class PlaylistSongModal extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <div>
-          <button className="auth-buts" onClick={this.openModal}>Add to Playlist</button>
+          <button className="add-song-to-playlist-modal" onClick={this.openModal}>
+            <img src="http://res.cloudinary.com/jlofton/image/upload/v1501116087/whiteaddsongbutton_y5ho8m.svg" />
+          </button>
           <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
