@@ -10,6 +10,10 @@ import {
   PREVIOUS_SONG,
 } from '../actions/playlist_actions';
 
+import {
+  RECEIVE_PLAYLIST_SONG,
+} from '../actions/playlist_song_actions';
+
 
 const defaultState = {
   byId: {},
@@ -26,10 +30,6 @@ const playlistReducer = (state = defaultState, action) => {
       return Object.assign({}, state, { byId: action.playlists });
     case RECEIVE_PLAYLIST:
       return Object.assign({}, state, { currentPlaylist: action.playlist });
-    case ADD_SONG_TO_PLAYLIST:
-      return Object.assign({}, state, {
-        songIds: [...state.songIds, action.songId],
-      });
     case ADD_SONGS_TO_PLAYLIST:
       return Object.assign({}, state, {
         songIds: action.songs,

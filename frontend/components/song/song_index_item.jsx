@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PlaylistSongModal from '../playlist_song_modal/new_playlist_song_modal';
 
 class SongIndexItem extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class SongIndexItem extends React.Component {
           <Link to={`/songs/${song.id}`}>
             <p>{song.title}</p>
           </Link>
+          <PlaylistSongModal song={song}/>
         </div>
       </li>
     );

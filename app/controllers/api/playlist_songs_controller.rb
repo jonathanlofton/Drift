@@ -11,7 +11,7 @@ class Api::PlaylistSongsController < ApplicationController
     @playlist_song = PlaylistSong.new(playlist_song_params)
 
     if @playlist_song.save
-      render '/api/playlists'
+      render '/api/playlist_songs/show'
     else
       render(
         json: ["Playlist song not saved"],
@@ -24,7 +24,7 @@ class Api::PlaylistSongsController < ApplicationController
     @playlist_song = PlaylistSong.find(params[:id])
     if @playlist_song
       @playlist_song.destroy
-      render '/api/playlists'
+      render '/api/playlists/show'
     else
       render(
         json: ["Playlist song not deleted"],

@@ -25,16 +25,6 @@ export const receivePlaylist = playlist => ({
   playlist,
 });
 
-export const addSongToPlaylist = songId => ({
-  type: ADD_SONG_TO_PLAYLIST,
-  songId,
-});
-
-export const addSongsToPlaylist = songs => ({
-  type: ADD_SONGS_TO_PLAYLIST,
-  songs,
-});
-
 export const makeFirstSongInPlaylist = song => ({
   type: MAKE_FIRST_SONG_IN_PLAYLIST,
   song,
