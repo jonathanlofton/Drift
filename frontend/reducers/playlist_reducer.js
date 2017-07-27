@@ -20,6 +20,7 @@ const defaultState = {
   currentPlaylist: null,
   songIds: [],
   currentSong: null,
+  songInfo: {},
 };
 
 
@@ -47,6 +48,7 @@ const playlistReducer = (state = defaultState, action) => {
       return Object.assign({}, state, {
         songIds: action.songIds,
         currentSong: action.songIds.indexOf(action.songId),
+        songInfo: action.songInfo,
       });
     case SKIP_SONG:
       return Object.assign({}, state, {

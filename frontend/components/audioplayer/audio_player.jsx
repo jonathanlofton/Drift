@@ -114,10 +114,10 @@ class AudioPlayer extends React.Component {
       return (
         <div className="howler">
           <div className="player-info">
-            <img src="http://res.cloudinary.com/jlofton/image/upload/v1500702509/mac_demarco_show_page_mk9jgh.jpg" />
+            <img src={song.album.image_url} />
             <div className="player-artist-info">
               <h2 className="artist-song">{song.title}</h2>
-              <h2 className="artist-name">Artist name</h2>
+              <h2 className="artist-name">{ song.artist.name }</h2>
             </div>
 
           </div>

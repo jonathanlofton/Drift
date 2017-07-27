@@ -9,7 +9,7 @@ class SongIndexItem extends React.Component {
   }
 
   handleClick(song) {
-    this.props.loadArtist(this.props.songIds, song.id);
+    this.props.loadArtist(this.props.songIds, song.id, song);
   }
 
   render() {

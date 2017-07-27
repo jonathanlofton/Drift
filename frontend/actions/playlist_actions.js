@@ -30,10 +30,11 @@ export const makeFirstSongInPlaylist = song => ({
   song,
 });
 
-export const loadArtist = (songIds, songId) => ({
+export const loadArtist = (songIds, songId, songInfo) => ({
   type: LOAD_ARTIST,
   songIds,
   songId,
+  songInfo,
 });
 
 export const skipSong = () => ({

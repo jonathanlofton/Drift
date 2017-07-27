@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => ({
   receiveCurrentSong: song => dispatch(receiveCurrentSong(song)),
   addSongsToPlaylist: songs => dispatch(addSongsToPlaylist(songs)),
   makeFirstSongInPlaylist: song => dispatch(makeFirstSongInPlaylist(song)),
-  loadArtist: (songIds, songId) => dispatch(loadArtist(songIds, songId)),
+  loadArtist: (songIds, songId, songInfo) => dispatch(loadArtist(songIds, songId, songInfo)),
 });
 
 export default connect(
