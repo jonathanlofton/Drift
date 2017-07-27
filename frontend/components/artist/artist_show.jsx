@@ -18,6 +18,7 @@ class ArtistShow extends React.Component {
 
   render() {
     if (this.props.artists.albums) {
+      console.log(this.props)
       const { artists: artist } = this.props;
       const { albums } = this.props.artists;
       const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
@@ -37,11 +38,18 @@ class ArtistShow extends React.Component {
                     <h1>{album.name}</h1>
                   </li>
                   <ul className="artist-album-song-list">
+                    <div className="table-titles">
+                      <h1 className="table-title">TITLE</h1>
+                      <h1 className="table-artist">ARTIST</h1>
+                      <h1 className="created-at">CREATED AT</h1>
+                    </div>
                     {album.songs.map((song, idx) => (
                       <li className="artist-album-song-list-item" key={idx}>
                         <button onClick={() => this.handleClick(song)}><img src={playButton} alt=""/></button>
-                        <h1>{song.title}</h1>
                         <PlaylistSongModal song={song}/>
+                        <h1 className="song-title">{song.title}</h1>
+                        <h1 className="artist-name">{artist.name}</h1>
+                        <h1 className="created-at">{song.created_at.slice(0,10)}</h1>
                       </li>
                     ))}
                   </ul>

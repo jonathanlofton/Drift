@@ -30,6 +30,29 @@
 
 
     .artist-album-list {
+      .table-titles {
+        display: flex;
+
+        h1 {
+          margin: 0 10px;
+          color: gray;
+        }
+        .table-title {
+          align-self: flex-start;
+          margin-left: 65px;
+          margin-bottom: 5px;
+        }
+
+        .table-artist {
+          position: absolute;
+          margin-left: 30%;
+        }
+
+        .created-at {
+          position: absolute;
+          margin-left: 50%;
+        }
+      }
 
 
       .artist-show-content {
@@ -69,10 +92,24 @@
             display: flex;
             border-top: 1px solid grey;
             border-bottom: 1px solid grey;
-            padding-left: 30px;
             padding-top: 5px;
             padding-bottom: 5px;
             align-items: center;
+
+            .song-title {
+              position: absolute;
+              margin-left: 8%;
+            }
+
+            .artist-name {
+              position: absolute;
+              margin-left: 30%;
+            }
+
+            .created-at {
+              position: absolute;
+              margin-left: 50%;
+            }
 
             button {
               img {
@@ -82,9 +119,6 @@
 
             }
 
-            h1 {
-              margin-left: 20px;
-            }
           }
         }
       }

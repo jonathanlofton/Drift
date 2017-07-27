@@ -54,7 +54,7 @@ class PlaylistShow extends React.Component {
                 <h1 className="song-title">{song.title}</h1>
                 <h1 className="artist-name">{song.artist.name}</h1>
                 <h1 className="created-at">{song.artist.created_at.slice(0,10)}</h1>
-                <button onClick={() => this.handleDeleteSong()} className="delete-button">X</button>
+                <button onClick={() => this.handleDeleteSong()} className="delete-button"></button>
               </li>
             ))}
           </ul>
