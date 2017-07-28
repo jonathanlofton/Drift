@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :artists, only: [:show, :index]
     resources :playlists, only: [:show, :index, :create, :destroy, :update]
     resources :playlist_songs, only: [:show, :index, :create, :destroy]
+    resources :followings, only: [:show, :index, :create, :destroy]
   end
 
   root to: 'static_pages#root'

@@ -27,7 +27,8 @@ class SideBar extends React.Component {
           <Link to="/music/albums"><h1>Albums</h1></Link>
           <Link to="/music/playlists"><h1>Playlists</h1></Link>
           <div className="sidebar-playlists">
-            <h1><NewPlaylistModalContainer /></h1>
+            <h1 className="create-playlist"><NewPlaylistModalContainer /></h1>
+            <h1 className="my-playlists">My Playlists</h1>
             <ul className="sidebar-playlist-list">
               { byId.map(playlist => (
                 <li key={playlist.id} className="sidebar-playlist-list-item">

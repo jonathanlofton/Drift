@@ -8,6 +8,11 @@ class User < ApplicationRecord
   has_many :playlists,
     foreign_key: :creator_id
 
+  has_many :followings
+
+  has_many :followed_playlists,
+    through: :followings,
+    source: :playlist
 
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness

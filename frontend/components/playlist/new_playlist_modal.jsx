@@ -88,7 +88,10 @@ class NewPlaylistModal extends React.Component {
     let formType;
     return (
       <div className="new-playlist-button">
-        <button className="open-modal-button" onClick={this.openModal}>New playlist</button>
+        <button className="open-modal-button" onClick={this.openModal}>
+          <h1>New playlist</h1>
+          <img src="http://res.cloudinary.com/jlofton/image/upload/v1501116087/whiteaddsongbutton_y5ho8m.svg" />
+        </button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}

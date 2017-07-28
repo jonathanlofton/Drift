@@ -29,9 +29,27 @@
     }
 
     .sidebar-playlists {
-      border-top: 1px solid lightgray;
-      h1 {
+      .create-playlist {
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
       }
+
+      .my-playlists {
+        font-style: sans-serif;
+        font-size: 14px;
+        padding: 10px 0;
+        font-weight: 100;
+      }
+
+      .new-playlist-button {
+        display: flex;
+        .open-modal-button {
+          img {
+            width: 25px;
+          }
+        }
+      }
+
     }
   }
 
@@ -52,6 +70,16 @@
   border-radius: 12px;
   outline: 1px solid slategrey;
 }
+
+.open-modal-button {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-left: 10px;
+  }
+}
+
 
 .open-modal-button:hover {
   color: white;
