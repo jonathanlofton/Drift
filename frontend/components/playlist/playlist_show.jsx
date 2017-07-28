@@ -4,10 +4,16 @@ import { withRouter } from 'react-router-dom';
 class PlaylistShow extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      following: false,
+    }
+
     this.handleClick = this.handleClick.bind(this);
     const playlistId = this.props.match.params.playlistId;
     this.props.fetchPlaylist(playlistId);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleFollow = this.handleFollow.bind(this);
+    this.followOrNot = this.followOrNot.bind(this);
   }
 
   handleClick(song){
@@ -26,8 +32,39 @@ class PlaylistShow extends React.Component {
     }
   }
 
+
   handleDeleteSong(id) {
-    this.props.deletePlaylistSong(id);
+    this.props.deletePlaylistSong(id).then( this.setState);
+  }
+
+  followOrNot() {
+    if (this.props.playlist.currentPlaylist.followed) {
+      return <button className="playlist-follow-button" onClick={this.handleFollow}>UnFollow</button>;
+    } else {
+      return <button className="playlist-follow-button" onClick={this.handleFollow}>Follow</button>;
+    }
+  }
+
+  handleFollow() {
+    const playlistId = this.props.playlist.currentPlaylist.id;
+    const userId = this.props.session.currentUser.id;
+    const followings = this.props.playlist.currentPlaylist.followings;
+    // finding the following id
+
+    let followId;
+    followings.forEach(following => {
+      if (following.user_id === userId) {
+        followId = following.id;
+      }
+    })
+
+    if (this.state.following) {
+      this.setState({ following: false });
+      this.props.deleteFollowing(followId).then(this.props.history.push(this.props.location.pathname));
+    } else {
+      this.setState({ following: true });
+      this.props.createFollowing({ following: { playlist_id: playlistId, user_id: userId } });
+    }
   }
 
   render() {
@@ -42,6 +79,7 @@ class PlaylistShow extends React.Component {
           <div className="playlist-info">
             <img src={currentPlaylist.image_url} />
             <div className="playlist-title-and-delete">
+              { this.followOrNot() }
               <button className="playlist-delete-button" onClick={() => this.handleDelete(currentPlaylist.id)}>Delete</button>
               <h1 className="playlist-title">{currentPlaylist.name}</h1>
               <h1 className="creator-name">By: { creator }</h1>

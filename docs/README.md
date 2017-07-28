@@ -9,12 +9,12 @@
 
 This project is a web application based off of Spotify, an online music player. This application will be built with Ruby on Rails, React, and Redux. By the end of the project the list of criteria below should be completed.
 
-- [ ] New account creation, login, and guest/demo login
-- [ ] A production README
-- [ ] Hosting on Heroku
-- [ ] Song, Artist, Album index and show
-- [ ] Playlist CRUD
-- [ ] Continuous play while navigating site
+- [x] New account creation, login, and guest/demo login
+- [x] A production README
+- [x] Hosting on Heroku
+- [x] Song, Artist, Album index and show
+- [x] Playlist CRUD
+- [x] Continuous play while navigating site
 - [ ] Following playlists/Friending users
 - [ ] Bonus: Radio (shuffle play)
 - [ ] Bonus: Explore Page

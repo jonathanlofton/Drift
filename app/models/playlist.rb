@@ -14,4 +14,11 @@ class Playlist < ApplicationRecord
 
   has_many :songs,
   through: :playlist_songs
+
+
+  def current_user_following?(id)
+    follower = self.followers.find_by(id: id)
+    !!follower
+  end
+
 end

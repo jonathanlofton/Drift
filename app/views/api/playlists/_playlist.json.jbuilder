@@ -1,5 +1,3 @@
 json.extract! playlist, :id, :name, :creator_id, :image_url
 
-# json.followers @playlist.followers do |follower|
-#   json.(follower, :id, :username)
-# end
+# json.currentUserFollow playlist.current_user_following?(current_id)

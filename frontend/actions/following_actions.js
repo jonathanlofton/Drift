@@ -9,9 +9,9 @@ export const receiveFollowings = followings => ({
   followings,
 });
 
-export const receivePlaylistSong = playlistSong => ({
+export const receiveFollowing = following => ({
   type: RECEIVE_FOLLOWING,
-  playlistSong,
+  following,
 });
 
 export const fetchFollowings = () => dispatch => (
@@ -30,6 +30,6 @@ export const createFollowing = (playlistId, userId) => dispatch => (
   APIUtil.createFollowing(playlistId, userId).then(following => dispatch(receiveFollowing(following)))
 );
 
-export const deleteFollowing = followingId => (
-  APIUtil.deleteFollowing(followingId)
+export const deleteFollowing = followingId => dispatch => (
+  dispatch(APIUtil.deleteFollowing(followingId))
 );

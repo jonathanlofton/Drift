@@ -14,20 +14,20 @@ class Api::FollowingsController < ApplicationController
       render '/api/followings/show'
     else
       render(
-        json: ["Following song not saved"],
+        json: ["Playlist not followed"],
         status: 500
       )
     end
   end
 
   def destroy
-    @following = Following.find(params[:id])
+    @following = Following.find_by(id: params[:id])
     if @following
-      @following.destroy
-      render '/api/playlists/show'
+      @following.delete
+      render '/api/followings/show'
     else
       render(
-        json: ["Following song not deleted"],
+        json: ["Playlist was not unfollowed"],
         status: 500
       )
     end

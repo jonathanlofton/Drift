@@ -4,7 +4,7 @@ import { fetchPlaylists } from '../../actions/playlist_actions';
 
 const mapStateToProps = ({ session, playlist }) => ({
   session,
-  playlist,
+  playlist, // this is where you run your selector for filtering playlists
 });
 
 const mapDispatchToProps = dispatch => ({

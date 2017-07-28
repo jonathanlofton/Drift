@@ -209,10 +209,7 @@ Song.create(title: "Way Back" , album_id: birds_in_the_trap.id, artist_id: travi
 
 
 
-phil = User.create(username: "Phil Collins", password: "hotdogs")
-sebastian = User.create(username: "Sebastian Butcher", password: "hotdogs")
-victoria = User.create(username: "Victoria Vermuth", password: "hotdogs")
-christina = User.create(username: "christina bellagini", password: "hotdogs")
+
 
 
 
@@ -254,7 +251,10 @@ Song.create(title: "Atoll Moao", album_id: nujabes_album.id, artist_id: nujabes.
 
 
 
-
+phil = User.create(username: "Phil Collins", password: "hotdogs")
+sebastian = User.create(username: "Sebastian Butcher", password: "hotdogs")
+victoria = User.create(username: "Victoria Vermuth", password: "hotdogs")
+christina = User.create(username: "christina bellagini", password: "hotdogs")
 
 
 
@@ -267,6 +267,10 @@ PlaylistSong.create(playlist_id: phils_playlist.id, song_id: walking.id)
 PlaylistSong.create(playlist_id: phils_playlist.id, song_id: burning_song.id)
 PlaylistSong.create(playlist_id: phils_playlist.id, song_id: novacane.id)
 PlaylistSong.create(playlist_id: phils_playlist.id, song_id: blue_boy.id)
+
+Following.create(playlist_id: phils_playlist.id, user_id: sebastian.id)
+Following.create(playlist_id: phils_playlist.id, user_id: victoria.id)
+Following.create(playlist_id: phils_playlist.id, user_id: christina.id)
 
 
 phils_summer_playlist = Playlist.create(name: "Summer In San Fran", creator_id: phil.id, image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501205736/fern_xjanxg.jpg")

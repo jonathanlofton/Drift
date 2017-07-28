@@ -6,14 +6,15 @@ class Api::PlaylistsController < ApplicationController
 
   def show
     @playlist = Playlist.find(params[:id])
+    current_user
   end
 
   def create
     @playlist = Playlist.new(playlist_params)
     @playlist.creator_id = current_user.id
-    p @playlist
 
     if @playlist.save
+      current_user
       render '/api/playlists/show'
     else
       render(
