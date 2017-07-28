@@ -16,8 +16,12 @@ class ArtistIndexItem extends React.Component {
     return (
       <li className="artist-index-item" >
         <Link to={`/music/artists/${artist.id}`}>
-          <img src={artist.image_url} alt={artist.name} />
-           <h1>{ artist.name } </h1>
+          <div className="artist-index-item-img">
+            <img src={artist.image_url} alt={artist.name} />
+          </div>
+
+
+           <h1 className="artist-name">{ artist.name } </h1>
         </Link>
       </li>
     );

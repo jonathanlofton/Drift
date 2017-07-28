@@ -10,7 +10,7 @@ const customStyles = {
     backgroundColor: 'rgba(0, 0 ,0 , 0)'
   },
   content : {
-    borderRadius          : '4px',
+    borderRadius          : '0px',
     height                : "300px",
     width                 : "200px",
     top                   : '50%',
@@ -20,6 +20,7 @@ const customStyles = {
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
     background            : 'rgba(40, 40, 40, 1)',
+    border           : ' 1px solid rgba(40, 40, 40, 1)',
   }
 };
 

@@ -19,6 +19,7 @@
   display: flex;
   flex-flow: wrap;
   align-items: center;
+  justify-content: center;
   margin-top: 30px;
 
   .playlist-list-item {
@@ -29,16 +30,17 @@
 
 
     .playlist-photo {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
     }
 
     .playlist-info {
       position: absolute;
-      
+
 
       .playlist-name {
         font-size: 22px;
+        width: 200px;
       }
 
       .playlist-creator {
@@ -79,7 +81,8 @@
       .playlist-title {
         font-size: 50px;
         margin-left: 20px;
-        align-self: flex-start;
+        width: 250px;
+        text-align: left;
       }
 
       .creator-name {

@@ -128,6 +128,7 @@ class AudioPlayer extends React.Component {
               playing={this.state.playing}
               mute={this.state.muted}
               loop={this.state.loop}
+              onEnd={this.handleSkip}
               className="react-hower"
             />
             <div className="shuffle-button">

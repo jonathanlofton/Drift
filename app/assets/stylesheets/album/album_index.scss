@@ -2,16 +2,18 @@
 .album-content-page {
 
   .album-title {
-    position: relative;
-    font-size: 60px;
+    top: 20%;
+    left: 50%;
+    position: fixed;
     color: white;
-    font-weight: 100;
+    font-size: 60px;
     font-family: helvetica, sans-serif;
     text-align: center;
+    font-weight: 900;
   }
 
   .album-list {
-    margin-top: 5%;
+    margin-top: 20%;
     display: flex;
 
     .album-item {

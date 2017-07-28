@@ -1,12 +1,40 @@
 
 .artist-index {
 
+  .artist-index-title {
+    color: white;
+    font-size: 60px;
+    font-family: helvetica, sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    font-weight: 900;
+  }
+
   .artist-index-list {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
 
     .artist-index-item {
+
+      .artist-name {
+        position: relative;
+        z-index: 1;
+        top: 20%;
+      }
+
+      .artist-index-item-img {
+
+        img {
+          z-index: -1;
+          position: relative;
+        }
+      }
+
+      .artist-index-item-img:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0) -20%,rgb(6, 7, 9));
+      }
+
       margin: 30px;
     }
 
