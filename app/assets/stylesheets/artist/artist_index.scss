@@ -17,17 +17,19 @@
 
     .artist-index-item {
 
-      .artist-name {
-        position: relative;
-        z-index: 1;
-        top: 20%;
-      }
+
 
       .artist-index-item-img {
 
         img {
           z-index: -1;
           position: relative;
+        }
+
+        .artist-name {
+          position: relative;
+          z-index: 1;
+          transition: font-size 1s, top 3s;
         }
       }
 

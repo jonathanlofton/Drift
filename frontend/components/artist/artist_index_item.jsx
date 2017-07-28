@@ -21,7 +21,7 @@ class ArtistIndexItem extends React.Component {
           </div>
 
 
-           <h1 className="artist-name">{ artist.name } </h1>
+           <h1 className="artist-name">{ artist.name }</h1>
         </Link>
       </li>
     );

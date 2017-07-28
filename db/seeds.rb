@@ -135,7 +135,7 @@ Song.create(title: "The Build Up", album_id: riot.id, artist_id: kings.id , genr
 
 
 
-toro_y_moi = Artist.create(name: "Toro Y Moi", genre: "Indie", image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501213048/toro_y_moi_u6d6jg.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501213026/toro_y_moi_bpzbsw.jpg")
+toro_y_moi = Artist.create(name: "Toro Y Moi", genre: "Indie", image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501213048/toro_y_moi_u6d6jg.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501221802/toro_y_moi_new_banner_wuvqmx.jpg")
 causers_of_this = Album.create(name:"Causers of this", artist_id: toro_y_moi.id, genre: toro_y_moi.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501213016/toroymoi_album_wruwom.jpg")
 Song.create(title: "Blessa", album_id: causers_of_this.id, artist_id: toro_y_moi.id, genre: toro_y_moi.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1501212571/01_Blessa_y4lyfb.mp3")
 Song.create(title: "Minors" , album_id: causers_of_this.id, artist_id: toro_y_moi.id, genre: toro_y_moi.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1501212571/02_Minors_lndmq2.mp3")
