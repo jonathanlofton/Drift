@@ -99,7 +99,7 @@ Song.create(title: "Black Cadillac", album_id: good_news.id, artist_id: modest_m
 
 
 
-outkast = Artist.create(name: "Outkast", genre: "Hip Hop", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501213997/outkastpic_tlu5vq.jpg", show_image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501213997/outkastbanner_hpocsi.jpg")
+outkast = Artist.create(name: "Outkast", genre: "Hip Hop", image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501213997/outkastpic_tlu5vq.jpg", show_image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501228044/outkast_banner_qv9swz.jpg")
 speakerboxxx = Album.create(name: "Speakerboxxx", artist_id: outkast.id, genre: outkast.genre, image_url: "http://res.cloudinary.com/jlofton/image/upload/v1501213997/outkast_album_yef0qy.jpg")
 hey_ya = Song.create(title: "Hey Ya", album_id: speakerboxxx.id, artist_id: outkast.id, genre: outkast.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1501213843/2-09_Hey_Ya_y4yb39.mp3")
 Song.create(title: "Roses", album_id: speakerboxxx.id, artist_id: outkast.id, genre: outkast.genre, song_url: "http://res.cloudinary.com/jlofton/video/upload/v1501213846/2-10_Roses_e9zsno.mp3")

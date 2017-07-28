@@ -1,11 +1,10 @@
 
 # Drift
 
-Minimum Viable Product
-https://trello.com/b/p0hdtuwM/drift
-
-Heroku
-https://driftspotifyclone.herokuapp.com/#/
+[Trello Link][Trello]
+[Trello]: https://trello.com/b/p0hdtuwM/drift
+[Heroku Link][Heroku]
+[Heroku]: https://driftspotifyclone.herokuapp.com/#/
 
 ## Minimum Viable Product
 
@@ -24,11 +23,17 @@ This project is a web application based off of Spotify, an online music player. 
 
 ## Design Docs
 
-* [wireframes](wireframes/)
-* [components](component-hierarchy.md)
-* [sample-state](sample-state.md)
-* [api-endpoints](api-endpoints.md)
-* [schema](schema.md)
+* [wireframes](wireframes)
+* [components](component-hierarchy)
+* [sample-state](sample-state)
+* [api-endpoints](api-endpoints)
+* [schema](schema)
+
+[wireframes]: ./wireframes
+[components]: ./component-hierarchy.md
+[sample-state]: ./sample-state.md
+[api-endpoints]: ./api-endpoints.md
+[schema]: ./schema.md
 
 
 ## Implementation Timeline
