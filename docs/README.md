@@ -1,10 +1,9 @@
 
 # Drift
 
-[Trello Link][Trello]
-[Trello]: https://trello.com/b/p0hdtuwM/drift
-[Heroku Link][Heroku]
-[Heroku]: https://driftspotifyclone.herokuapp.com/#/
+[Trello Link](https://trello.com/b/p0hdtuwM/drift)
+
+[Heroku Link](https://driftspotifyclone.herokuapp.com/#/)
 
 ## Minimum Viable Product
 
