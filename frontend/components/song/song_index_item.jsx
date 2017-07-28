@@ -15,7 +15,6 @@ class SongIndexItem extends React.Component {
   render() {
     const { song } = this.props;
     const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
-    console.log(this.props)
     return (
       <li className="song-item">
         <button onClick={() => this.handleClick(song)} className="play-button"><img src={playButton} /></button>

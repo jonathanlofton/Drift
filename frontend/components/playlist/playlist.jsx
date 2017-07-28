@@ -14,7 +14,6 @@ class Playlist extends React.Component {
   render() {
     if (this.props.playlists.byId.length > 0) {
       const { playlists } = this.props;
-      console.log(this.props)
       return (
         <div className="playlist-index-content">
           <h1 className="playlist-index-title">Playlists</h1>

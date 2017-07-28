@@ -13,7 +13,6 @@ class SideBar extends React.Component {
 
 
   render () {
-    console.log(this.props)
 
     if (this.props.playlist.byId.length > 0) {
       const { byId } = this.props.playlist;

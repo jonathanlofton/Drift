@@ -14,7 +14,6 @@ class SongIndex extends React.Component {
   render(){
     const { songs, loadArtist, songIds } = this.props;
     const songss = songs.slice(0, songs.length - 1)
-    console.log(this.props)
     return (
       <div className="song-index-content">
         <div className="photo">

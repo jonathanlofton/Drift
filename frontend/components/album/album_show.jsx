@@ -13,7 +13,6 @@ class AlbumShow extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     if (this.props.albums.albumPlaylist.length > 0) {
       const { artist, image_url, name, songs } = this.props.albums;
       const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';

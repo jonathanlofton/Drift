@@ -17,7 +17,6 @@ class NewPlaylistSongForm extends React.Component {
 
   render () {
     const playlists = this.props.playlist.byId;
-    console.log(this.props)
     return (
       <div className="new-playlist-song-form">
         <div className="modal-form">

@@ -34,7 +34,7 @@ class PlaylistShow extends React.Component {
 
 
   handleDeleteSong(id) {
-    this.props.deletePlaylistSong(id).then( this.setState);
+    this.props.deletePlaylistSong(id).then(this.setState);
   }
 
   followOrNot() {
@@ -68,7 +68,6 @@ class PlaylistShow extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     if (this.props.playlist.currentPlaylist) {
       const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
       const { currentPlaylist } = this.props.playlist;
