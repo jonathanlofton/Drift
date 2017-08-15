@@ -43,13 +43,29 @@
     margin-right: 25px;
     transition: color 1s;
 
-    .loginout {
-      transition: color 0.5s;
+    .header-current-user {
+      color: white;
+      font-size: 50px;
     }
 
-    .loginout:hover {
-      color: #1db954;
+    .loginout {
+
+      display: flex;
+
+      h1 {
+        margin-right: 20px;
+      }
+
+      button {
+        transition: color 0.5s;
+      }
+
+      button:hover {
+        color: #1db954;
+      }
     }
+
+
   }
 
 

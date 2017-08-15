@@ -15,7 +15,14 @@ class Header extends React.Component {
 
   navLink() {
     if ( this.props.currentUser ) {
-      return <button onClick={this.handleClick}>Log Out</button>;
+      const { username } = this.props.currentUser
+      
+      return (
+        <div className="loginout">
+          <h1>{username}</h1>
+          <button onClick={this.handleClick}>Log Out</button>
+        </div>
+      );
     } else {
       return <Link to="/login">Log In</Link>;
     }
@@ -23,7 +30,7 @@ class Header extends React.Component {
 
   currentUser() {
     if (this.props.currentUser) {
-      return <h1>{currentUser.name}</h1>
+      return <h1>{currentUser.username}</h1>
     }
     return <h1>Guest login</h1>
   }
@@ -42,11 +49,8 @@ class Header extends React.Component {
         </div>
         <div className="header-nav-bar">
           <div className="header-current-user">
-            <h1>
-              {this.currentUser}
-            </h1>
           </div>
-          <div className="loginout">{ this.navLink() }</div>
+          { this.navLink() }
         </div>
       </div>
 
