@@ -1,56 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-#Images
-# The dodos
-# (http://res.cloudinary.com/jlofton/image/upload/v1500702511/the_dodos_photo_gwzwzo.jpg)
-# - album
-# (http://res.cloudinary.com/jlofton/image/upload/v1500608954/dodos_album_s8bbef.jpg)
-# Mac Demarco
-# (http://res.cloudinary.com/jlofton/image/upload/v1500702509/mac_demarco_show_page_mk9jgh.jpg)
-# - album
-# http://res.cloudinary.com/jlofton/image/upload/v1500608955/mac_demarco_salad_days_r23ahk.jpg
-# songs
-# http://res.cloudinary.com/jlofton/video/upload/v1500607523/Mac_DeMarco_-_Blue_Boy_x4aori.mp3
-# ASAP ROCKY
-# http://res.cloudinary.com/jlofton/image/upload/v1500702822/asap-rocky-banner_mgvyhf.png
-# - album
-# http://res.cloudinary.com/jlofton/image/upload/v1500511968/asap-rocky-photo_alswqd.jpg
-# Interpol
-# http://res.cloudinary.com/jlofton/image/upload/v1500702510/Interpol-photo_vvccgl.jpg
-# - album
-# http://res.cloudinary.com/jlofton/image/upload/v1500702510/Interpol-photo_vvccgl.jpg
-# songs
-# http://res.cloudinary.com/jlofton/video/upload/v1500607527/Interpol_-_Cmere_oo2mq7.mp3
-# Gang of Four
-# http://res.cloudinary.com/jlofton/image/upload/v1500702510/gang_of_four_photo_afwkva.jpg
-# -ablum
-# songs
-# http://res.cloudinary.com/jlofton/video/upload/v1500607528/Gang_of_Four_-_Damaged_Goods_EMI_Version_vhpy9r.mp3
-# http://res.cloudinary.com/jlofton/image/upload/v1500608954/gang_of_four_album_qi9zmt.jpg
-# Frank Ocean
-# http://res.cloudinary.com/jlofton/image/upload/v1500702509/frank-ocean-icon_gkmlsr.jpg
-# songs
-# http://res.cloudinary.com/jlofton/video/upload/v1500607627/12_american_wedding_bxmqf6.mp3
-# http://res.cloudinary.com/jlofton/video/upload/v1500607626/03_novacane_a5x3ue.mp3
-# http://res.cloudinary.com/jlofton/video/upload/v1500607625/10_swim_good_atxtsi.mp3
-# http://res.cloudinary.com/jlofton/video/upload/v1500607625/04_we_all_try_yfmrz8.mp3
-# http://res.cloudinary.com/jlofton/video/upload/v1500607620/14_nature_feels_rkay3c.mp3
-# - album
-# http://res.cloudinary.com/jlofton/image/upload/v1500608955/frank_ocean_album_wsmy93.jpg
-# Travis Scott
-# http://res.cloudinary.com/jlofton/image/upload/v1500702509/naturel-travis-scott-rodeo-artwork_sva9x0.jpg
-# - album
-# http://res.cloudinary.com/jlofton/image/upload/v1500608956/travis_scott_album_svjcg0.jpg
-# songs
-# http://res.cloudinary.com/jlofton/video/upload/v1500607528/Travis_Scott_-_RaRa_ft._Lil_Uzi_Vert_w1a7sw.mp3
-
-
-
 Artist.destroy_all
 Album.destroy_all
 Song.destroy_all
@@ -251,6 +198,7 @@ Song.create(title: "Atoll Moao", album_id: nujabes_album.id, artist_id: nujabes.
 
 
 
+guest = User.create(username: 'Guest', password: 'hotdogs')
 phil = User.create(username: "Phil Collins", password: "hotdogs")
 sebastian = User.create(username: "Sebastian Butcher", password: "hotdogs")
 victoria = User.create(username: "Victoria Vermuth", password: "hotdogs")
