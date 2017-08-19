@@ -20,7 +20,7 @@ class ArtistShow extends React.Component {
     if (this.props.artists.albums) {
       const { artists: artist } = this.props;
       const { albums } = this.props.artists;
-      const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
+      const playButton = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/buttons/play-song-white.svg';
       return (
         <div className="artist-show">
           <div className="artist-show-banner">

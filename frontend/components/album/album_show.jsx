@@ -15,7 +15,7 @@ class AlbumShow extends React.Component {
   render() {
     if (this.props.albums.albumPlaylist.length > 0) {
       const { artist, image_url, name, songs } = this.props.albums;
-      const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
+      const playButton = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/buttons/play-song-white.svg';
       return (
         <div className="content">
           <div className="album-show-page">

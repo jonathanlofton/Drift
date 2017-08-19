@@ -69,7 +69,7 @@ class PlaylistShow extends React.Component {
 
   render() {
     if (this.props.playlist.currentPlaylist) {
-      const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1500777291/playerwhite_w2wcy1.svg';
+      const playButton = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/buttons/play-song-white.svg';
       const { currentPlaylist } = this.props.playlist;
       const { creator } = this.props.playlist.currentPlaylist;
       const { songs } = currentPlaylist;
