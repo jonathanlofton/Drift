@@ -53,7 +53,7 @@ const playlistReducer = (state = defaultState, action) => {
       });
     case SKIP_SONG:
       return Object.assign({}, state, {
-        currentSong: state.currentSong + 1,
+        currentSong: (state.currentSong + 1),
       });
     case PREVIOUS_SONG:
       return Object.assign({}, state, {
