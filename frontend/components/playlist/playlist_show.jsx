@@ -78,9 +78,11 @@ class PlaylistShow extends React.Component {
           <div className="playlist-info">
             <img src={currentPlaylist.image_url} />
             <div className="playlist-title-and-delete">
-              { this.followOrNot() }
-              <button className="playlist-delete-button" onClick={() => this.handleDelete(currentPlaylist.id)}>Delete</button>
               <h1 className="playlist-title">{currentPlaylist.name}</h1>
+              <div className="delete-follow">
+                { this.followOrNot() }
+                <button className="playlist-delete-button" onClick={() => this.handleDelete(currentPlaylist.id)}>Delete</button>
+              </div>
               <h1 className="creator-name">By: { creator }</h1>
             </div>
           </div>

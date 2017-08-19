@@ -85,6 +85,33 @@
         text-align: left;
       }
 
+      .delete-follow {
+        display: flex;
+        justify-content: flex-start;
+
+
+        .playlist-delete-button {
+          margin-left: 20px;
+          font-size: 20px;
+          font-weight: 100;
+        }
+
+        .playlist-delete-button:hover {
+          color: red;
+        }
+
+        .playlist-follow-button {
+          margin-left: 20px;
+          font-size: 20px;
+          font-weight: 100;
+        }
+
+        .playlist-follow-button:hover {
+          color: #1db954;
+        }
+
+      }
+
       .creator-name {
         margin-left: 20px;
         font-size: 20px;
@@ -92,16 +119,9 @@
         align-self: flex-start;
       }
 
-      .playlist-delete-button {
-        align-self: flex-start;
-        margin-left: 20px;
-        font-size: 20px;
-        font-weight: 100;
-      }
 
-      .playlist-delete-button:hover {
-        color: red;
-      }
+
+
     }
   }
 
