@@ -40,8 +40,8 @@ class AudioPlayer extends React.Component {
   }
 
   loopOrNot() {
-    const loop = 'http://res.cloudinary.com/jlofton/image/upload/v1501044017/whiteloopbutton_copy_gf45ob.svg';
-    const loopengaged = 'http://res.cloudinary.com/jlofton/image/upload/v1501043789/loopbutton_v0ebug.svg';
+    const loop = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/whiteloopbutton+copy.svg';
+    const loopengaged = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/loopbuttongreen.svg';
     if (this.state.loop) {
       return <button onClick={this.handleLoop}><img src={loopengaged} alt="" /></button>;
     }
@@ -57,8 +57,8 @@ class AudioPlayer extends React.Component {
   }
 
   muteOrUnmute() {
-    const muted = "http://res.cloudinary.com/jlofton/image/upload/v1501043792/whitemutebutton_pulpcm.svg";
-    const unmuted = "http://res.cloudinary.com/jlofton/image/upload/v1501043789/greenmutebutton_ymfriv.svg";
+    const muted = "https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/green-mutebutton.svg";
+    const unmuted = "https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/white-mutebutton.svg";
     if (this.state.muted) {
       return <button onClick={this.handleMute}><img src={muted}/></button>;
     }
@@ -74,8 +74,8 @@ class AudioPlayer extends React.Component {
   }
 
   playOrPause() {
-    const playButton = 'http://res.cloudinary.com/jlofton/image/upload/v1501043789/newplaybutton_tpj24x.svg';
-    const pauseButton = 'http://res.cloudinary.com/jlofton/image/upload/v1501043789/newpausebutton_jgudqq.svg';
+    const playButton = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/newplaybutton.svg';
+    const pauseButton = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/newpausebutton.svg';
     if (this.state.playing) {
       return <button onClick={this.handlePlay}><img src={pauseButton} alt="" /></button>;
     }
@@ -91,8 +91,8 @@ class AudioPlayer extends React.Component {
   }
 
   shuffleOrNot() {
-    const shuffle = 'http://res.cloudinary.com/jlofton/image/upload/v1501045538/whiteshuffle_cyvwth.svg';
-    const shuffleEngaged = 'http://res.cloudinary.com/jlofton/image/upload/v1501045538/greenshuffle_h32ckw.svg';
+    const shuffle = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/whiteshuffle.svg';
+    const shuffleEngaged = 'https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/greenshuffle.svg';
     if (this.state.shuffle) {
       return <button onClick={this.handleShuffle}><img src={shuffleEngaged} alt="" /></button>;
     }
@@ -135,7 +135,7 @@ class AudioPlayer extends React.Component {
             </div>
             <div className="previous-song">
               <button onClick={this.handlePrevious}>
-                <img src="http://res.cloudinary.com/jlofton/image/upload/v1501044115/leftnext_p6r6bi.svg" />
+                <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/skipleft.svg" />
               </button>
             </div>
             <div className="play-button">
@@ -143,7 +143,7 @@ class AudioPlayer extends React.Component {
             </div>
             <div className="next-song">
               <button onClick={this.handleSkip}>
-                <img src="http://res.cloudinary.com/jlofton/image/upload/v1501043789/skipright_eccgjb.svg" />
+                <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/skipright.svg" />
               </button>
             </div>
             <div className="loop-button">
@@ -167,23 +167,23 @@ class AudioPlayer extends React.Component {
           <div className="audio-player-buttons">
             <div></div>
             <div className="shuffle-button">
-              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501045538/whiteshuffle_cyvwth.svg"/>
+              <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/whiteshuffle.svg"/>
             </div>
             <div className="previous-song">
-              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501044115/leftnext_p6r6bi.svg" />
+              <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/skipleft.svg" />
             </div>
             <div className="play-button">
-              <img src='http://res.cloudinary.com/jlofton/image/upload/v1501043789/newplaybutton_tpj24x.svg' alt="" />
+              <img src='https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/newplaybutton.svg' alt="" />
             </div>
             <div className="next-song">
-              <img src="http://res.cloudinary.com/jlofton/image/upload/v1501043789/skipright_eccgjb.svg" />
+              <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/skipright.svg" />
             </div>
             <div className="loop-button">
-              <img src='http://res.cloudinary.com/jlofton/image/upload/v1501044017/whiteloopbutton_copy_gf45ob.svg' alt="" />
+              <img src='https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/whiteloopbutton+copy.svg' alt="" />
             </div>
           </div>
           <div className="mute-button">
-            <img src="http://res.cloudinary.com/jlofton/image/upload/v1501043789/greenmutebutton_ymfriv.svg" />
+            <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/audioplayer/buttons/white-mutebutton.svg" />
           </div>
           <div className="sound-bar">
 
