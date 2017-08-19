@@ -5,13 +5,13 @@ import SessionFormContainer from './session/session_form_container';
 import MusicContainer from './music/music_container';
 import HeaderContainer from './header/header_container';
 
-
+// <script src="http://widget.cloudinary.com/global/all.js" type="text/javascript" />
 const App = () => (
   <div className="everything">
     <header className="header">
       <script src="https://use.fontawesome.com/d8bd735538.js" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet" />
-      <script src="http://widget.cloudinary.com/global/all.js" type="text/javascript" />
+
 
       <Route path="/" component={HeaderContainer} />
     </header>

@@ -17,7 +17,7 @@ class SongIndex extends React.Component {
     return (
       <div className="song-index-content">
         <div className="photo">
-          <img src="http://res.cloudinary.com/jlofton/image/upload/v1501181191/drifting_photo_for_song_page_vp4ozt.jpg" />
+          <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/drifting+photo+for+song+page.jpg" />
           <div className="song-index-title">
             <h1 className="song-index-title-drift">DRIFT.</h1>
             <h2 className="song-index-title-subheading">to the music...</h2>

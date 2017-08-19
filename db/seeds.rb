@@ -208,7 +208,7 @@ christina = User.create(username: "christina bellagini", password: "hotdogs")
 
 
 
-phils_playlist = Playlist.create(name: "Phils Favorites", creator_id: phil.id, image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501094244/water2_gwbgjc.jpg")
+phils_playlist = Playlist.create(name: "Phils Favorites", creator_id: phil.id, image_url: "https://s3-us-west-2.amazonaws.com/spotifyclone-dev/playlist+photos/water2_gwbgjc.jpg")
 
 PlaylistSong.create(playlist_id: phils_playlist.id, song_id: lacroix_song.id)
 PlaylistSong.create(playlist_id: phils_playlist.id, song_id: walking.id)
@@ -221,7 +221,7 @@ Following.create(playlist_id: phils_playlist.id, user_id: victoria.id)
 Following.create(playlist_id: phils_playlist.id, user_id: christina.id)
 
 
-phils_summer_playlist = Playlist.create(name: "Summer In San Fran", creator_id: phil.id, image_url: "https://res.cloudinary.com/jlofton/image/upload/v1501205736/fern_xjanxg.jpg")
+phils_summer_playlist = Playlist.create(name: "Summer In San Fran", creator_id: phil.id, image_url: "https://s3-us-west-2.amazonaws.com/spotifyclone-dev/playlist+photos/surfboardstock_ivpwqw.jpg")
 
 PlaylistSong.create(playlist_id: phils_summer_playlist.id, song_id: battlecry.id)
 PlaylistSong.create(playlist_id: phils_summer_playlist.id, song_id: lacroix_song.id)

@@ -16,7 +16,7 @@ class Header extends React.Component {
   navLink() {
     if ( this.props.currentUser ) {
       const { username } = this.props.currentUser
-      
+
       return (
         <div className="loginout">
           <h1>{username}</h1>
@@ -44,7 +44,7 @@ class Header extends React.Component {
 
       <div className="header-render">
         <div className="app-title-icon-combo">
-          <img src="http://res.cloudinary.com/jlofton/image/upload/v1500496705/message-in-a-bottle-white_hc6fkx.svg" className="icon"/>
+          <img src="https://s3-us-west-2.amazonaws.com/spotifyclone-dev/message-in-a-bottle-white.svg" className="icon"/>
           <Link to="/music/artists"><h1 className="App-title">DRIFT</h1></Link>
         </div>
         <div className="header-nav-bar">
