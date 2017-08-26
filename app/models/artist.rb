@@ -5,6 +5,6 @@ class Artist < ApplicationRecord
   has_many :songs
 
   def self.search(term="")
-    self.where("artists.name LIKE '%#{term}%'")
+    self.where("artists.name ILIKE '%#{term}%'")
   end
 end

@@ -1,7 +1,9 @@
 import * as APIUtil from '../util/artist_api_util';
+import { START_FETCHING } from '../reducers/fetching_reducer';
 
 export const RECEIVE_ARTISTS = 'RECEIVE_ARTISTS';
 export const RECEIVE_ARTIST = 'RECEIVE_ARTIST';
+
 
 // actions are creating JSON objects that will go to a reducer and
 // make a change to the state and post it to the store, the reason
@@ -28,3 +30,7 @@ export const fetchArtist = id => dispatch => (
     dispatch(receiveArtist(artist))
   ))
 );
+
+export const startFetchingArtists = () => ({
+  type: START_FETCHING,
+});
