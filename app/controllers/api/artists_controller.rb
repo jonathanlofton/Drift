@@ -8,4 +8,15 @@ class Api::ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  def search
+    @tracks = Artist.search(search_params[:term])
+    render 'api/artists'
+  end
+
+  private
+
+  def search_params
+    params.require(:search).permit(:term)
+  end
+
 end
