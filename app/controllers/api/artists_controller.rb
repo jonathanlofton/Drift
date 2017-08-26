@@ -9,8 +9,8 @@ class Api::ArtistsController < ApplicationController
   end
 
   def search
-    @tracks = Artist.search(search_params[:term])
-    render 'api/artists'
+    @artists = Artist.search(search_params[:term])
+    render 'api/artists/index'
   end
 
   private
