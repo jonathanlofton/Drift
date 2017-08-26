@@ -1,4 +1,5 @@
 import React from 'react';
+import ArtistIndexItem from '../artist/artist_index_item';
 
 
 class Search extends React.Component {
@@ -38,30 +39,32 @@ class Search extends React.Component {
   }
 
   artistview() {
+    const { artists } = this.state;
     if (this.props.fetching === true) {
       return <p>Loading</p>;
     }
     return (
-      <ul className="track-list">
-        {this.state.artists.map(artist =>
-          (<li key={artist.id}>{artist.name}</li>
-          ))}
-      </ul>
+      <div className="artist-index">
+        <ul className="artist-index-list">
+          {artists.map(artist => <ArtistIndexItem key={artist.id} artist={artist} />)}
+        </ul>
+      </div>
     );
   }
 
   render() {
-    console.log(this.props)
-    console.log(this.state)
     return (
-      <div className="search">
-        <input
-          ref={(input) => { this.searchInput = input; }}
-          onChange={this.handleSearch}
-          value={this.state.searchQuery}
-          placeholder="Start typing..."
-        />
-        <div className="search-tracks">
+      <div className="search-page">
+        <div className="search">
+          <input
+            ref={(input) => { this.searchInput = input; }}
+            onChange={this.handleSearch}
+            value={this.state.searchQuery}
+            placeholder="Start typing..."
+          />
+
+        </div>
+        <div className="search-artists">
           {this.artistview()}
         </div>
       </div>
