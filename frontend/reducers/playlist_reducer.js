@@ -9,6 +9,7 @@ import {
   SKIP_SONG,
   PREVIOUS_SONG,
   SHUFFLE_PLAYLIST,
+  UNSHUFFLE_PLAYLIST,
 } from '../actions/playlist_actions';
 
 import {
@@ -23,6 +24,17 @@ const defaultState = {
   currentSong: null,
   songInfo: {},
 };
+
+function shuffle(a) {
+  var j, x, i;
+  for (i = a.length; i; i--) {
+    j = Math.floor(Math.random() * i);
+    x = a[i - 1];
+    a[i - 1] = a[j];
+    a[j] = x;
+  }
+  return a;
+}
 
 
 const playlistReducer = (state = defaultState, action) => {
@@ -61,7 +73,11 @@ const playlistReducer = (state = defaultState, action) => {
       })
     case SHUFFLE_PLAYLIST:
       return Object.assign({}, state, {
-        songIds: state.songIds.shuffle,
+        songIds: shuffle(state.songIds),
+      })
+    case UNSHUFFLE_PLAYLIST:
+      return Object.assign({}, state, {
+        songIds: state.songIds.sort(),
       })
     default:
       return state;

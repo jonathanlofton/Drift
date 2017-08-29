@@ -10,6 +10,7 @@ export const MAKE_FIRST_SONG_IN_PLAYLIST = 'MAKE_FIRST_SONG_IN_PLAYLIST';
 export const SKIP_SONG = 'SKIP_SONG';
 export const PREVIOUS_SONG = 'PREVIOUS_SONG';
 export const SHUFFLE_PLAYLIST = 'SHUFFLE_PLAYLIST';
+export const UNSHUFFLE_PLAYLIST = 'UNSHUFFLE_PLAYLIST';
 
 export const receivePlaylists = playlists => ({
   type: RECEIVE_PLAYLISTS,
@@ -48,6 +49,10 @@ export const previousSong = () => ({
 
 export const shufflePlaylist = () => ({
   type: SHUFFLE_PLAYLIST,
+});
+
+export const unshufflePlaylist = () => ({
+  type: UNSHUFFLE_PLAYLIST,
 });
 
 export const fetchPlaylists = () => dispatch => (

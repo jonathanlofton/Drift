@@ -102,9 +102,9 @@ class AudioPlayer extends React.Component {
   handleShuffle() {
     if (this.state.shuffle) {
       this.setState({ shuffle: false });
-      this.props.shufflePlaylist();
     } else {
       this.setState({ shuffle: true });
+      this.props.shufflePlaylist();
     }
   }
 
