@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import AudioPlayer from './audio_player';
 import { fetchSongs } from '../../actions/song_actions';
 import { playSong } from '../../actions/audio_player_actions';
-import { skipSong, previousSong, shufflePlaylist, unshufflePlaylist } from '../../actions/playlist_actions';
+import { skipSong, previousSong, shufflePlaylist, unshufflePlaylist, loopPlaylist } from '../../actions/playlist_actions';
 import { fetchArtist } from '../../actions/artist_actions';
 import { fetchAlbum } from '../../actions/album_actions';
 
@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => ({
   playsong: song => dispatch(playSong(song)),
   shufflePlaylist: () => dispatch(shufflePlaylist()),
   unshufflePlaylist: () => dispatch(unshufflePlaylist()),
+  loopPlaylist: () => dispatch(loopPlaylist()),
   fetchSongs: () => dispatch(fetchSongs()),
   fetchAlbum: () => dispatch(fetchAlbum()),
   fetchArtist: () => dispatch(fetchArtist()),

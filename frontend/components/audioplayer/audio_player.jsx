@@ -83,7 +83,11 @@ class AudioPlayer extends React.Component {
   }
 
   handleSkip() {
-    this.props.skipSong();
+    if (this.state.loop) {
+      this.props.loopPlaylist();
+    } else {
+      this.props.skipSong();
+    }
   }
 
   handlePrevious() {

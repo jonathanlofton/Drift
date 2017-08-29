@@ -10,6 +10,7 @@ import {
   PREVIOUS_SONG,
   SHUFFLE_PLAYLIST,
   UNSHUFFLE_PLAYLIST,
+  LOOP_PLAYLIST,
 } from '../actions/playlist_actions';
 
 import {
@@ -62,6 +63,11 @@ const playlistReducer = (state = defaultState, action) => {
         songIds: action.songIds,
         currentSong: action.songIds.indexOf(action.songId),
         songInfo: action.songInfo,
+      });
+    case LOOP_PLAYLIST:
+      const len = state.songIds.length;
+      return Object.assign({}, state, {
+        currentSong: ((state.currentSong + 1) % len) - 1,
       });
     case SKIP_SONG:
       return Object.assign({}, state, {
