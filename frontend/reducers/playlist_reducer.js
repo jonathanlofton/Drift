@@ -8,8 +8,8 @@ import {
   LOAD_ARTIST,
   SKIP_SONG,
   PREVIOUS_SONG,
+  SHUFFLE_PLAYLIST,
 } from '../actions/playlist_actions';
-
 
 import {
   RECEIVE_PLAYLIST_SONG,
@@ -58,6 +58,10 @@ const playlistReducer = (state = defaultState, action) => {
     case PREVIOUS_SONG:
       return Object.assign({}, state, {
         currentSong: state.currentSong - 1,
+      })
+    case SHUFFLE_PLAYLIST:
+      return Object.assign({}, state, {
+        songIds: state.songIds.shuffle,
       })
     default:
       return state;

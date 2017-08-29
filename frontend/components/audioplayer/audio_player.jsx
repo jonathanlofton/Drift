@@ -102,6 +102,7 @@ class AudioPlayer extends React.Component {
   handleShuffle() {
     if (this.state.shuffle) {
       this.setState({ shuffle: false });
+      this.props.shufflePlaylist();
     } else {
       this.setState({ shuffle: true });
     }
@@ -115,7 +116,7 @@ class AudioPlayer extends React.Component {
           <div className="player-info">
             <img src={song.album.image_url} />
             <div className="player-artist-info">
-              <h2 className="artist-song">{song.title}</h2>
+              <h2 className="artist-song">{ song.title }</h2>
               <h2 className="artist-name">{ song.artist.name }</h2>
             </div>
 
