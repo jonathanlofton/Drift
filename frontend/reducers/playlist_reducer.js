@@ -73,11 +73,11 @@ const playlistReducer = (state = defaultState, action) => {
       })
     case SHUFFLE_PLAYLIST:
       return Object.assign({}, state, {
-        songIds: shuffle(state.songIds),
+        songIds: [state.songIds[0]].concat(shuffle(state.songIds.slice(1))),
       })
     case UNSHUFFLE_PLAYLIST:
       return Object.assign({}, state, {
-        songIds: state.songIds.sort(),
+        songIds: [state.songIds[0]].concat(state.songIds.slice(1).sort()),
       })
     default:
       return state;
