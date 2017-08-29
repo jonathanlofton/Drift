@@ -62,7 +62,7 @@ const playlistReducer = (state = defaultState, action) => {
     case LOOP_PLAYLIST:
       const len = state.songIds.length;
       return Object.assign({}, state, {
-        currentSong: ((state.currentSong + 1) % len) - 1,
+        currentSong: ((state.currentSong + 1) % len),
       });
     case SKIP_SONG:
       return Object.assign({}, state, {
