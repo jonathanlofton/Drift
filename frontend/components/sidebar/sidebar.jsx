@@ -3,18 +3,12 @@ import NewPlaylistModalContainer from '../playlist/new_playlist_modal_container'
 import { Route, Link } from 'react-router-dom';
 
 class SideBar extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.props.fetchPlaylists();
   }
 
-  render () {
-    console.log(this.props)
+  render() {
     if (this.props.playlist.byId.length > 0) {
-
       const { byId } = this.props.playlist;
       return (
         <div className="nav-bar-box">

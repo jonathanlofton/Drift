@@ -11,7 +11,6 @@ class AudioPlayer extends React.Component {
       shuffle: false,
     };
 
-
     this.handlePlay = this.handlePlay.bind(this);
     this.playOrPause = this.playOrPause.bind(this);
     this.handleMute = this.handleMute.bind(this);
@@ -22,7 +21,14 @@ class AudioPlayer extends React.Component {
     this.handlePrevious = this.handlePrevious.bind(this);
     this.handleShuffle = this.handleShuffle.bind(this);
     this.shuffleOrNot = this.shuffleOrNot.bind(this);
+  }
 
+  componentDidMount() {
+    this.props.fetchSongs();
+    if (this.props.song !== null) {
+      this.props.fetchArtist(this.props.song.artist_id);
+      this.props.fetchAlbum(this.props.song.album_id);
+    }
   }
 
   handleLoop() {
@@ -31,12 +37,6 @@ class AudioPlayer extends React.Component {
     } else {
       this.setState({ loop: true });
     }
-  }
-
-  componentDidMount() {
-    this.props.fetchSongs();
-    this.props.fetchArtist(this.props.song.artist_id);
-    this.props.fetchAlbum(this.props.song.album_id);
   }
 
   loopOrNot() {
