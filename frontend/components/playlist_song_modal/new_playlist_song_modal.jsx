@@ -40,11 +40,6 @@ class PlaylistSongModal extends React.Component {
   openModal() {
     this.setState({modalIsOpen: true});
   }
-  //
-  // afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   this.subtitle.style.color = '#f00';
-  // }
 
   closeModal() {
     this.setState({modalIsOpen: false});

@@ -23,8 +23,8 @@ class NewPlaylistSongForm extends React.Component {
           <label className="create-playlist-form-label">
             <h1 className="add-song-to-playlist-title">Choose playlist</h1>
             <ul className="playlist-list">
-              {playlists.map(playlist => (
-                <li className="playlist-item">
+              {playlists.map((playlist, idx) => (
+                <li className="playlist-item" key="idx">
                   <button onClick={this.handleClick(playlist.id)}>{playlist.name}</button>
                 </li>
               ))}
