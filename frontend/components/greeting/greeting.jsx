@@ -30,9 +30,6 @@ class SessionLinks extends React.Component {
   }
 }
 
-
-
-
 const personalGreeting = (currentUser, logout) => (
   <div className="personal-greeting-page">
     <hgroup className="header-group">

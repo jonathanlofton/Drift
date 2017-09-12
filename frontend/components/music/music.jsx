@@ -14,7 +14,7 @@ import SideBarContainer from '../sidebar/sidebar_container';
 class Music extends React.Component {
   constructor(props) {
     super(props);
-    this.props.fetchPlaylists();
+    // this.props.fetchPlaylists();
   }
 
   render() {

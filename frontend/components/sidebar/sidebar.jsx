@@ -11,10 +11,10 @@ class SideBar extends React.Component {
     this.props.fetchPlaylists();
   }
 
-
   render () {
     console.log(this.props)
     if (this.props.playlist.byId.length > 0) {
+
       const { byId } = this.props.playlist;
       return (
         <div className="nav-bar-box">

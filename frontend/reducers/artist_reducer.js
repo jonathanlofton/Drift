@@ -7,7 +7,6 @@ const defaultState = {
 
 const artistReducer = (state = defaultState, action) => {
   Object.freeze(state);
-  console.log(action)
   switch (action.type) {
     case RECEIVE_ARTISTS:
       return Object.assign({}, state, { byId: action.artists });
