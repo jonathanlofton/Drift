@@ -1,5 +1,4 @@
 import React from 'react';
-import ArtistAlbumShow from './artist_show';
 import PlaylistSongModal from '../playlist_song_modal/new_playlist_song_modal';
 
 
@@ -14,7 +13,6 @@ class ArtistShow extends React.Component {
   handleClick(song){
     this.props.loadArtist(this.props.artists.all_songs, song.id, song);
   }
-
 
   render() {
     if (this.props.artists.albums) {
